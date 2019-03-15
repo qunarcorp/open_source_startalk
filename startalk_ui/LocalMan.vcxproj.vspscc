@@ -1,0 +1,16 @@
+﻿""
+{
+"FILE_VERSION" = "9237"
+"ENLISTMENT_CHOICE" = "NEVER"
+"PROJECT_FILE_RELATIVE_PATH" = ""
+"NUMBER_OF_EXCLUDED_FILES" = "6"
+"EXCLUDED_FILE0" = "GeneratedFiles\\QCHAT_R\\moc_updateinfornewdialog.cpp"
+"EXCLUDED_FILE1" = "GeneratedFiles\\Release\\moc_updateinfornewdialog.cpp"
+"EXCLUDED_FILE2" = "GeneratedFiles\\CHAT_D\\moc_updateinfornewdialog.cpp"
+"EXCLUDED_FILE3" = "GeneratedFiles\\Debug\\moc_updateinfornewdialog.cpp"
+"EXCLUDED_FILE4" = "GeneratedFiles\\Release4TS\\moc_updateinfornewdialog.cpp"
+"EXCLUDED_FILE5" = "GeneratedFiles\\R_64\\moc_updateinfornewdialog.cpp"
+"ORIGINAL_PROJECT_FILE_PATH" = ""
+"NUMBER_OF_NESTED_PROJECTS" = "0"
+"SOURCE_CONTROL_SETTINGS_PROVIDER" = "PROJECT"
+}

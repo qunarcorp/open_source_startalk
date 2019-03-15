@@ -1,0 +1,46 @@
+#MainWidget QListView#GroupListView,#MainWidget QListView#CombinationListView {border:none;background:#00000000;}
+
+#MainWidget QTreeView#RosterTreeView {                    
+     border: none;                                 
+     background-color: #00000000;                                 
+ }                                                                 
+#MainWidget QTreeView#RosterTreeView::branch:has-siblings:!adjoins-item {                    
+     border-image: none;                                 
+ }                                                                 
+                                                                   
+#MainWidget QTreeView#RosterTreeView::branch:has-siblings:adjoins-item {                     
+     border-image: none;                           
+ }                                                                 
+                                                                   
+#MainWidget QTreeView#RosterTreeView::branch:!has-children:!has-siblings:adjoins-item {      
+     border-image: none;                             
+ }                                                                 
+                                                                   
+#MainWidget QTreeView#RosterTreeView::branch:has-children:!has-siblings:closed,              
+#MainWidget QTreeView#RosterTreeView::branch:has-children:!has-siblings:closed,              
+#MainWidget QTreeView#RosterTreeView::branch:closed:has-children:has-siblings {              
+         border-image: none;                                       
+         image: url(:/Images/branch-closed.png);                            
+ }                                                                 
+                                                                   
+#MainWidget QTreeView#RosterTreeView::branch:open:has-children:!has-siblings,                
+#MainWidget QTreeView#RosterTreeView::branch:open:has-children:has-siblings  {               
+         border-image: none;                                       
+         image: url(:/Images/branch-closed.png);                              
+ }    
+ 
+ 
+ #FriendsExtendPanel QListView#listView{border:none;background:#00000000;}
+ 
+#MainWidget QListView#FriendsListView {                    
+     border: none;                                 
+     background-color: #00000000;                                 
+ }  
+#MainWidget QListView#PublicAccountListView {                    
+     border: none;                                 
+     background-color: #00000000;                                 
+ }  
+ #MainWidget QListView#BlackNameListView {                    
+     border: none;                                 
+     background-color: #00000000;                                 
+ }

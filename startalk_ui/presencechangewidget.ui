@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PresenceChangeWidget</class>
+ <widget class="QWidget" name="PresenceChangeWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>100</width>
+    <height>61</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>100</width>
+    <height>60</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>PresenceChangeWidget</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+
+QWidget
+{
+border: 1px solid 000000;
+}
+QToolButton{
+	color:000000;
+	background:#FFFFFF;
+	border:none;
+}
+</string>
+  </property>
+  <widget class="QToolButton" name="busy">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>40</y>
+     <width>100</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>100</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QToolButton{
+	background:#FFFFFF;
+border:none;
+}</string>
+   </property>
+   <property name="text">
+    <string>繁忙</string>
+   </property>
+   <property name="icon">
+    <iconset resource="localman.qrc">
+     <normaloff>:/Images/presence_busy.png</normaloff>:/Images/presence_busy.png</iconset>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextBesideIcon</enum>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="away">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>20</y>
+     <width>100</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>100</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QToolButton{
+	background:#FFFFFF;
+border:none;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>离开</string>
+   </property>
+   <property name="icon">
+    <iconset resource="localman.qrc">
+     <normaloff>:/Images/presence_away.png</normaloff>:/Images/presence_away.png</iconset>
+   </property>
+   <property name="popupMode">
+    <enum>QToolButton::DelayedPopup</enum>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextBesideIcon</enum>
+   </property>
+   <property name="autoRaise">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="online">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>100</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>100</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>在线</string>
+   </property>
+   <property name="icon">
+    <iconset resource="localman.qrc">
+     <normaloff>:/Images/presence_online.png</normaloff>:/Images/presence_online.png</iconset>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextBesideIcon</enum>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="localman.qrc"/>
+ </resources>
+ <connections/>
+</ui>

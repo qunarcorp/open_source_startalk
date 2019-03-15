@@ -1,0 +1,271 @@
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 0px;
+    background: #FFFFFF;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 3px solid #FFFFFF;
+    border-radius: 6px;
+    background: rgb(172, 172, 172);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.msgbody {
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+    margin: 0;
+    padding: 0;
+    font-family: 'Î¢ÈíÑÅºÚ', 'ËÎÌå';
+    -webkit-user-select: none;
+}
+
+
+.bk {
+}
+
+.fn-clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.systemnotify {
+    MARGIN-RIGHT: auto;
+    MARGIN-LEFT: auto;
+    TEXT-ALIGN: center;
+    color: #999999;
+    font-size: 12px;
+}
+
+.fn-clearfix {
+    display: inline-block;
+}
+
+* html .fn-clearfix {
+    height: 1%;
+}
+
+.fn-clearfix {
+    display: block;
+}
+
+.newline {
+    margin: 20px 10px 10px;
+    vertical-align: middle;
+}
+
+.self, .other {
+}
+
+    .other .bubble, .other .bubble9 {
+        float: left;
+    }
+
+    .self .bubble, .self .bubble9 {
+        float: right;
+    }
+
+.head {
+    width: 30px;
+    height: 30px;
+}
+
+.bubble {
+    color: #333333;
+    position: relative;
+    /*width: 200px;*/
+    /*height: 100px;*/
+    padding: 5px;
+    max-width: 85%;
+    min-width: 50px;
+    margin: 0 0px;
+    -webkit-border-radius: 3px;
+    border-radius: 2px;
+    border: 1px solid #b0d6d9;
+    background-color: #c1e5e9;
+    text-align: left;
+    vertical-align: middle;
+    word-wrap: break-word;
+    table-layout: fixed;
+    word-break: break-all;
+}
+
+.bubble9 {
+    color: #333333;
+    word-wrap: break-word;
+    table-layout: fixed;
+    word-break: break-all;
+    max-width: 100%;
+    min-width: 50px;
+    text-align: left;
+    border-bottom: 15px;
+    border-top: 15px;
+    border-right: 15px;
+    border-left: 15px;
+    -webkit-border-fit: lines;
+}
+
+    .bubble9.mc-local-sender {
+        -webkit-border-image: url(../image/balloon_right.png) 30 29 30 29 !important;
+    }
+
+    .bubble9.mc-remote-sender {
+        -webkit-border-image: url(../image/balloon_left.png) 30 29 30 29 !important;
+        ;
+    }
+
+    .bubble9.mc-remote-redpack {
+        border-radius: 4px;
+        font-size: 12px;
+        padding: 3px 10px;
+        background: #BBBBBB;
+    }
+
+.balloon-inside {
+    color: #333333;
+    font-size: 12px;
+    font-family: 'Î¢ÈíÑÅºÚ';
+    -webkit-user-select: text;
+}
+
+.self .balloon-inside {
+    margin: -8px -2px -8px -8px;
+    /*font-size:12px;*/
+}
+
+.other .balloon-inside {
+    margin: -8px -8px -8px -2px;
+    /*font-size:12px;*/
+}
+
+.bubble.left:before {
+    border-color: rgba(0, 0, 0, 0) #b0d6d9;
+    border-width: 0 7px 7px 0;
+    bottom: auto;
+    left: -7px;
+    top: 6px;
+}
+
+.bubble.right:before {
+    border-color: rgba(0, 0, 0, 0) #b0d6d9;
+    border-width: 0 0 7px 7px;
+    bottom: auto;
+    left: auto;
+    right: -7px;
+    top: 5px;
+}
+
+.bubble:before {
+    border-color: #5A8F00 rgba(0, 0, 0, 0);
+    border-style: solid;
+    border-width: 20px 20px 0;
+    bottom: -20px;
+    content: "";
+    display: block;
+    left: 40px;
+    position: absolute;
+    width: 0;
+}
+
+.bubble.left:after {
+    border-color: rgba(0, 0, 0, 0) #c1e5e9;
+    border-width: 0 5px 5px 0;
+    bottom: auto;
+    left: -5px;
+    top: 6px;
+}
+
+.bubble.right:after {
+    border-color: rgba(0, 0, 0, 0) #c1e5e9;
+    border-width: 0 0 5px 5px;
+    bottom: auto;
+    left: auto;
+    right: -5px;
+    top: 6px;
+}
+
+.bubble:after {
+    border-color: #FFFFFF rgba(0, 0, 0, 0);
+    border-style: solid;
+    border-width: 13px 13px 0;
+    bottom: -13px;
+    content: "";
+    display: block;
+    left: 47px;
+    position: absolute;
+    width: 0;
+}
+
+.history {
+    width: 150px;
+    margin: 3px auto;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 14px;
+    -webkit-border-radius: 5px;
+    vertical-align: middle;
+}
+
+#loaded span:hover {
+    text-decoration: underline;
+    color: #1BA9BA;
+    cursor: pointer;
+}
+
+#filecard span {
+    text-decoration: underline;
+    color: #1BA9BA;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+    #filecard span:hover {
+        color: #0000FF;
+        cursor: pointer;
+    }
+
+
+
+.self .voice-secend {
+    vertical-align: middle;
+    padding-right: 5px;
+}
+
+.other .voice-secend {
+    vertical-align: middle;
+    padding-left: 5px;
+}
+
+.self .voice-icon {
+    vertical-align: middle;
+    padding-right: 5px;
+    display: none;
+}
+
+.other .voice-icon {
+    vertical-align: middle;
+    padding-left: 5px;
+    display: none;
+}
+
+.matype {
+    display: none;
+}
+
+.kx {
+    margin: 8px;
+    border: 0;
+    padding: 0;
+}

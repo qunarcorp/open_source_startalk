@@ -1,0 +1,200 @@
+﻿/* 工具栏 */
+/* 邀请按钮 */
+#GroupChatDialog QPushButton#addGroupItem{  
+    border: none;
+    image : url(:/Images/icon/yaoqing.png);
+}
+
+#GroupChatDialog QPushButton#addGroupItem:hover,
+#GroupChatDialog QPushButton#addGroupItem:pressed{
+    image : url(:/Images/icon/yaoqing_hover.png);
+}
+
+
+/* 退出按钮 */
+#GroupChatDialog QPushButton#leaveButton{
+    border:1px solid #00000000;
+    image : url(:/Images/titlebar_function_quit_normal.png);
+}
+
+#GroupChatDialog QPushButton#leaveButton:hover{
+	image : url(:/Images/titlebar_function_quit_down.png);
+}
+
+#GroupChatDialog QPushButton#leaveButton:pressed{
+	image : url(:/Images/titlebar_function_quit_down.png);
+}
+
+#GroupChatDialog QPushButton#sendmail{  
+    border:none;
+    margin-right:6px;
+    image : url(:/Images/icon/mail.png);
+}
+
+#GroupChatDialog QPushButton#sendmail:hover,
+#GroupChatDialog QPushButton#sendmail:checked,
+#GroupChatDialog QPushButton#sendmail:pressed{
+    image : url(:/Images/icon/mail_hover.png);
+}
+
+
+
+#GroupChatDialog QCheckBox#chkAutoJoin:indicator:unchecked {
+    image: url(:/Images/notice_close.png)
+}
+#GroupChatDialog QCheckBox#chkAutoJoin:indicator:checked {
+    image: url(:/Images/notice_open.png)
+}
+
+#GroupChatDialog QWidget#spider_0{
+    background-color: #E0E0E0;
+}
+#GroupChatDialog QWidget#rightPanel{
+    border-left:1px solid #E0E0E0;
+}
+
+
+#GroupChatDialog QWidget#widget_3{
+    background-color: #FFFFFF;
+}
+#GroupChatDialog QWidget#fontpage{
+    background-color: #FFFFFF;
+}
+#GroupChatDialog QWidget#widget_tool{
+	border:none;
+    background-color: #FFFFFF;
+}
+#GroupChatDialog QWidget#borderinput{
+    background-color: #FFFFFF;
+}
+#GroupChatDialog QWidget#border_3,#webviewPanel{
+    background-color: #FFFFFF;
+}
+
+#GroupChatDialog QWebView#webView
+{
+    background:#00000000;
+}
+
+
+#GroupChatDialog QTextEdit#textEdit{
+    border:none;
+	background-color: #00000000;
+}
+
+#GroupChatDialog QTextEdit#frametextedit{
+    border:none;
+	background-color: #FFFFFF;
+}
+
+  
+#GroupChatDialog QWidget#groupfilepanel,QWidget#groupLstPanel{
+    border:none;
+    background:#F5F5F5;
+}
+
+#GroupChatDialog QWidget#groupListTitle{
+background-color:#D7D7D7;
+}
+#GroupChatDialog QListView#listView{
+    border:none;
+    background:#00000000;
+}
+
+#GroupChatDialog QWidget#groupListTitle,QWidget#grouptitlepanel,QWidget#widget_title{
+    background-color:#E0E0E0;   
+}
+
+#GroupChatDialog QWidget#groupListTitle,QWidget#groupfiletitle,QWidget#btnMore,QWidget#pbRefresh,QWidget#sendbtn,QWidget#productbtn{
+    padding-left:5px;
+    font-size:12px;
+}
+
+#GroupChatDialog QPushButton#btnMore{border:none;color:#1BA9BA;}
+#GroupChatDialog QPushButton#btnMore:hover{color:#147A47;}
+#GroupChatDialog #GroupFileView #functionPannel{border:none; background:#DD333333;}
+#GroupChatDialog #GroupFileView #functionPannel QPushButton{border:none; color:#FFFFFF;font-size:12px;}
+#GroupChatDialog #GroupFileView #functionPannel QPushButton:hover{color:#1BA9BA;}
+#GroupChatDialog #GroupFileView #functionPannel QPushButton:disabled{color:#999999;}
+#GroupChatDialog #GroupFileView #fileinfopannel {border:none; background:#F5F5F5;}
+#GroupChatDialog #GroupFileView #fileinfopannel  #progress{border:none;background:#FFFFFF;color:#333333;}
+#GroupChatDialog #GroupFileView #fileinfopannel  #progress::chunk{border:none;background:#1BA9BA;}
+#GroupChatDialog #GroupFileView #fileinfopannel  #progress::chunk:disabled{background:#FF3300;}
+#GroupChatDialog QPushButton#pbRefresh{border:none;color:#1BA9BA;}
+#GroupChatDialog QPushButton#pbRefresh:hover{color:#147A47;}
+
+
+
+
+#GroupChatDialog QPushButton#sendbtn{
+    border-radius: 0px;
+    color:#666666;
+    border:1px solid #E5E5E5;
+    background-color:#FFFFFF;
+}
+
+#GroupChatDialog QPushButton#sendbtn:hover{
+    color:#FFFFFF;
+    background-color:#38C738;
+}
+#GroupChatDialog QPushButton#sendbtn:pressed{
+    color:#FFFFFF;
+    background-color:#2FB82F;
+}
+#GroupChatDialog QLineEdit#noticy,#name
+{
+	border:none;
+	background:#00000000;
+}
+
+#GroupChatDialog QPushButton#productbtn{
+    border-radius: 0px;
+    color:#666666;
+    border:1px solid #E5E5E5;
+    background-color:#FFFFFF;
+}
+
+#GroupChatDialog QPushButton#productbtn:hover{
+    color:#FFFFFF;
+    background-color:#38C738;
+}
+#GroupChatDialog QPushButton#productbtn:pressed{
+    color:#FFFFFF;
+    background-color:#2FB82F;
+}
+
+#GroupChatDialog QPushButton#externBtn{ 
+    border:none;
+	border-top-left-radius: 10px;          
+	border-bottom-left-radius: 10px;       
+	image : url(:/Images/expend_tol_normal.png);
+} 
+#GroupChatDialog QPushButton#externBtn:hover{ 
+    image : url(:/Images/expend_tol_hover.png);
+} 
+#GroupChatDialog QPushButton#externBtn:pressed{ 
+   image : url(:/Images/expend_tol_press.png);
+} 
+#GroupChatDialog QPushButton#unreadBtn
+{
+	background-color: rgba(0, 0, 0,200);
+	border: 0px;
+	text-align: left;
+	color: #FFFFFF;
+	padding-left: 5px;
+}
+
+
+#GroupFileListView #treeWidget {border:none;background:#00000000;}
+#GroupFileListView #treeWidget #pinned{border:none;color:#999999;background:#00000000;}
+#GroupFileListView #treeWidget #GroupListFileItemView {border:none;background:#DBDBDB;}
+#GroupFileListView #treeWidget #GroupListFileItemView #iconlabel{border:none;background:#FFFFFF;}
+#GroupFileListView #treeWidget #GroupListFileItemView #display{padding-left:10px;border:none;background:#FFFFFF;color:#333333;}
+#GroupFileListView #treeWidget #GroupListFileItemView #progress{border:none;background:#FFFFFF;color:#333333;}
+#GroupFileListView #treeWidget #GroupListFileItemView #progress::chunk{border:none;background:#1BA9BA;}
+#GroupFileListView #treeWidget #GroupListFileItemView #progress::chunk:disabled{background:#FF3300;}
+#GroupFileListView #treeWidget #GroupListFileItemView #functionPannel{border:none;background:#FFFFFF;}
+#GroupFileListView #treeWidget #GroupListFileItemView #functionPannel QPushButton{border:none; color:#666666;font-size:12px;}
+#GroupFileListView #treeWidget #GroupListFileItemView #functionPannel QPushButton:hover{color:#1BA9BA;}
+#GroupFileListView #treeWidget #GroupListFileItemView #functionPannel QPushButton:disabled{color:#999999;}
+

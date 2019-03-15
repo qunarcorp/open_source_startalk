@@ -1,0 +1,125 @@
+
+
+QWidget{
+    font-family:"微软雅黑";
+}
+
+QLineEdit{
+    background-color: #00000000;
+    border:none;
+	color:#666666;
+	font-size:12px;
+}
+QLabel#name
+{
+	font: 75 16pt "微软雅黑";
+}
+
+
+QWidget#widgetBorder{
+    border: none;
+    border-radius: 0px;
+    
+}
+
+QWidget#webView
+{
+    background:#00000000;
+}
+QWidget#webviewFrame
+{
+    background:#FFFFFF;
+    border:#FF0000;
+}
+ 
+QWidget#spider_0{
+    background-color: #00000000;
+}
+QWidget#border{
+    background-color: #FFFFFF;
+}
+QWidget#border_3{
+    background-color: #FFFFFF;
+}
+QWidget#fontpage{
+    background-color: #FFFFFF;
+}
+QWidget#barpanel{
+	border:none;
+    background: #FFFFFF;
+}
+QWidget#frametextedit{
+    background-color: #FFFFFF;
+}
+QTextEdit#textEdit{
+    border:none;
+	background-color: #00000000;
+}
+
+/* 工具条 */
+QPushButton#trace{  
+    border:none;
+    image : url(:/Images/icon_go.png);
+}
+
+
+QPushButton#pushButton_muc{  
+    border:1px solid #00000000;
+    image : url(:/Images/titlebar_function_addMember_normal.png);
+}
+
+QPushButton#pushButton_muc:hover{
+    image : url(:/Images/titlebar_function_addMember_down.png);
+}
+
+QPushButton#pushButton_muc:pressed{
+    image : url(:/Images/titlebar_function_addMember_down.png);
+}
+
+QPushButton#sendmail{  
+    border:1px solid #00000000;
+    margin-right:6px;
+    image : url(:/Images/mailnormal.png);
+}
+
+QPushButton#sendmail:pressed{
+    image : url(:/Images/mailpress.png);
+}
+
+QPushButton#sendbtn{
+    border-radius: 0px;
+    color:#666666;
+    border:1px solid #E5E5E5;
+    background-color:#FFFFFF;
+}
+
+QPushButton#sendbtn:hover{
+    color:#FFFFFF;
+    background-color:#38C738;
+}
+QPushButton#sendbtn:pressed{
+    color:#FFFFFF;
+    background-color:#2FB82F;
+}
+
+
+
+QPushButton#productbtn{
+    border-radius: 0px;
+    color:#666666;
+    border:1px solid #E5E5E5;
+    background-color:#FFFFFF;
+}
+
+QPushButton#productbtn:hover{
+    color:#FFFFFF;
+    background-color:#38C738;
+}
+QPushButton#productbtn:pressed{
+    color:#FFFFFF;
+    background-color:#2FB82F;
+}
+
+QWidget#Titleswidget{
+    background-color:#D7D7D7;   
+}

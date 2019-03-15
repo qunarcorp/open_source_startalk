@@ -1,0 +1,106 @@
+﻿
+
+#MainWidget QPushButton#setting {
+    border :none;
+    image: url(:/Images/icon/setting.png);
+}
+
+#MainWidget QPushButton#setting:hover {
+    image: url(:/Images/icon/setting_hover.png);
+}
+#MainWidget QPushButton#setting:pressed {
+    image: url(:/Images/icon/setting_hover.png);
+}
+
+#MainWidget QPushButton#pbDingdan,
+#MainWidget QPushButton#pbDingdan {
+    border :none;
+    image: url(:/Images/icon/list_hover.png);
+}
+
+#MainWidget QPushButton#pbAdvert {
+    border :none;
+    image: url(:/Images/adver.png);
+}
+#MainWidget QPushButton#mainMenuBtn{
+	border:none;
+	image: url(:/Images/icon/add.png);
+}
+#MainWidget QPushButton#mainMenuBtn:hover,
+#MainWidget QPushButton#mainMenuBtn:pressed{
+	border:none;
+	image: url(:/Images/icon/add_hover.png);
+}
+
+#MainWidget QPushButton#questionBtn {
+    border :none;
+    image: url(:/Images/icon/question.png);
+}
+#MainWidget QPushButton#questionBtn:hover{
+	border:none;
+	image: url(:/Images/icon/question_hover.png);
+}
+
+
+#MainWidget QPushButton#combinationbtn{
+    border:none;
+    image:url(:/Images/icon/funbox.png);
+}
+#MainWidget QPushButton#combinationbtn:hover,
+#MainWidget QPushButton#combinationbtn:checked,
+#MainWidget QPushButton#combinationbtn:pressed{
+    border:none;
+    image:url(:/Images/icon/funbox_hover.png);
+}
+
+
+#MainWidget QPushButton#chatsbtn{
+    border:none;
+    image:url(:/Images/icon/chating.png);
+}
+#MainWidget QPushButton#chatsbtn:hover,
+#MainWidget QPushButton#chatsbtn:pressed,
+#MainWidget QPushButton#chatsbtn:checked{
+    border:none;
+    image:url(:/Images/icon/chating_hover.png);
+}
+
+#MainWidget QLabel#portraiticon{
+    border:1px solid #00000000;
+    background:#33000000;
+    image: url(:/Images/wifiup.png);
+}
+
+
+#MainWidget QLabel#unreadicon{border:none;background:#F55F56;border-radius:6px;color:#FFFFFF;font-size:7pt;font-family:"Consolas";}
+
+
+/*下浮动栏的面板整个*/
+#FriendsExtendPanel QWidget#menupanel { background:#DDFFFFFF;}
+
+#FriendsExtendPanel QListView {
+	background:#00000000;
+	border:none;
+    show-decoration-selected: 1;
+	color:#818181;
+	font-size:18px;
+}
+#FriendsExtendPanel QListView::item {
+	height:32px;
+	background: #00000000;
+	padding-left:20px;
+	border:none;
+}
+
+#FriendsExtendPanel QListView::item:hover {
+    background: #99FFFFFF;
+}
+
+#FriendsExtendPanel QPushButton {
+    padding: 0px 10px 0px 20px;
+    text-align:right;
+    color:#818181;
+    background:#00000000;
+    border:none;
+}
+

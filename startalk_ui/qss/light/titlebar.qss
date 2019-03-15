@@ -1,0 +1,52 @@
+
+#TitlebarWidget QWidget#Title_bar {
+	background-color: #00000000;
+}
+                          
+#TitlebarWidget QToolButton#Titlebar_Max {
+	background-color: #00000000;
+}
+#TitlebarWidget QToolButton#Titlebar_Min
+{
+	height:27px;
+	width:30px;
+	background:#00000000;
+	border-image: url(:/Images/min_normal.png);  
+}
+
+#TitlebarWidget QToolButton#Titlebar_Min:hover
+{
+	background:#E5E5E5;
+	border-image: url(:/Images/min_hover.png);  
+}
+
+#TitlebarWidget QToolButton#Titlebar_Min:pressed
+{
+	background:#CDCDCD;
+	border-image: url(:/Images/min_hover.png);  
+}
+
+
+
+
+#TitlebarWidget QToolButton#Titlebar_Close
+{
+	height:27px;
+	width:30px;
+	background:#00000000;
+	border-image: url(:/Images/close_normal.png);  
+}
+
+#TitlebarWidget QToolButton#Titlebar_Close:hover
+{
+	background:#F25561;
+	border-image: url(:/Images/close_hover.png);  
+}
+
+#TitlebarWidget QToolButton#Titlebar_Close:pressed
+{
+	background:#E74450;
+	border-image: url(:/Images/close_hover.png);  
+}
+
+

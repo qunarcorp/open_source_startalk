@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;cxx;c;def</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="CryptoTypeCollect">
+      <UniqueIdentifier>{16a455d9-8067-4258-8e5d-4aa3a0fd1bdf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dumper">
+      <UniqueIdentifier>{7abdeb13-a2e0-463e-a24f-7c1f8473687e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="mdump.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Log.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemDefine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DispathThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HttpResponse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UtilHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LogWriter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IXmlSerializeable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SerializeableHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CrcHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LogProcess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AsyncHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CryptoHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="breakpad\client_info.cc">
+      <Filter>dumper</Filter>
+    </ClCompile>
+    <ClCompile Include="breakpad\exception_handler.cc">
+      <Filter>dumper</Filter>
+    </ClCompile>
+    <ClCompile Include="breakpad\guid_string.cc">
+      <Filter>dumper</Filter>
+    </ClCompile>
+    <ClCompile Include="breakpad\minidump_generator.cc">
+      <Filter>dumper</Filter>
+    </ClCompile>
+    <ClCompile Include="breakpad\stdafx.cpp">
+      <Filter>dumper</Filter>
+    </ClCompile>
+    <ClCompile Include="breakpad\string_utils.cc">
+      <Filter>dumper</Filter>
+    </ClCompile>
+    <ClCompile Include="DumpHandle.cpp">
+      <Filter>dumper</Filter>
+    </ClCompile>
+    <ClCompile Include="RunnableExecutor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc\moc_SerializeableHelper.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc\moc_LogWriter.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc\moc_IXmlSerializeable.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc\moc_AsyncHandler.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc\moc_LogProcess.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc\moc_DispathThread.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc\moc_RunnableExecutor.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IJsonSerializeable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc\moc_IJsonSerializeable.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc\moc_ISerializeable.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc\moc_LambdaRunnnable.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="consoleoutput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc\moc_ImageHelper.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Markdown.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="mdump.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CoreObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemDefine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HttpResponse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CrcHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CryptoHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="breakpad\client_info.h">
+      <Filter>dumper</Filter>
+    </ClInclude>
+    <ClInclude Include="breakpad\exception_handler.h">
+      <Filter>dumper</Filter>
+    </ClInclude>
+    <ClInclude Include="breakpad\guid_string.h">
+      <Filter>dumper</Filter>
+    </ClInclude>
+    <ClInclude Include="breakpad\minidump_generator.h">
+      <Filter>dumper</Filter>
+    </ClInclude>
+    <ClInclude Include="breakpad\stdafx.h">
+      <Filter>dumper</Filter>
+    </ClInclude>
+    <ClInclude Include="breakpad\string_utils-inl.h">
+      <Filter>dumper</Filter>
+    </ClInclude>
+    <ClInclude Include="breakpad\inc\auto_critical_section.h">
+      <Filter>dumper</Filter>
+    </ClInclude>
+    <ClInclude Include="breakpad\inc\breakpad_types.h">
+      <Filter>dumper</Filter>
+    </ClInclude>
+    <ClInclude Include="breakpad\inc\minidump_cpu_amd64.h">
+      <Filter>dumper</Filter>
+    </ClInclude>
+    <ClInclude Include="breakpad\inc\minidump_cpu_ppc.h">
+      <Filter>dumper</Filter>
+    </ClInclude>
+    <ClInclude Include="breakpad\inc\minidump_cpu_ppc64.h">
+      <Filter>dumper</Filter>
+    </ClInclude>
+    <ClInclude Include="breakpad\inc\minidump_cpu_sparc.h">
+      <Filter>dumper</Filter>
+    </ClInclude>
+    <ClInclude Include="breakpad\inc\minidump_cpu_x86.h">
+      <Filter>dumper</Filter>
+    </ClInclude>
+    <ClInclude Include="breakpad\inc\minidump_exception_linux.h">
+      <Filter>dumper</Filter>
+    </ClInclude>
+    <ClInclude Include="breakpad\inc\minidump_exception_mac.h">
+      <Filter>dumper</Filter>
+    </ClInclude>
+    <ClInclude Include="breakpad\inc\minidump_exception_solaris.h">
+      <Filter>dumper</Filter>
+    </ClInclude>
+    <ClInclude Include="breakpad\inc\minidump_exception_win32.h">
+      <Filter>dumper</Filter>
+    </ClInclude>
+    <ClInclude Include="breakpad\inc\minidump_format.h">
+      <Filter>dumper</Filter>
+    </ClInclude>
+    <ClInclude Include="breakpad\inc\minidump_size.h">
+      <Filter>dumper</Filter>
+    </ClInclude>
+    <ClInclude Include="breakpad\inc\scoped_ptr.h">
+      <Filter>dumper</Filter>
+    </ClInclude>
+    <ClInclude Include="DumpHandle.h">
+      <Filter>dumper</Filter>
+    </ClInclude>
+    <ClInclude Include="consoleoutput.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Markdown.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="UtilHelper.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="LogWriter.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="IXmlSerializeable.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="SerializeableHelper.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="LogProcess.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DispathThread.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="AsyncHandler.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="RunnableExecutor.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="LambdaRunnnable.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="IJsonSerializeable.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ISerializeable.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ImageHelper.h">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

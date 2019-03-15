@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TransferChatDialog</class>
+ <widget class="QDialog" name="TransferChatDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>352</width>
+    <height>440</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#widget_bkg{
+    background-color:#D3D3D3;
+    border-radius: 4px;
+	border:1px solid #000000;
+}
+
+QWidget#widget_3{
+    background-color:#EAEAEA;
+
+}
+
+QLabel{
+    font-size:12px;
+    color:#000000;
+}
+QLabel#label_title{
+    font: bold 14px;
+}
+
+QPushButton#btnOk,#btnCancle
+{
+    border-radius: 2px;
+    border:1px solid #EBEBEB;
+    background-color:#FFFFFF;
+}
+
+QPushButton#btnOk:hover,#btnCancle:hover{
+    border-radius: 2px;
+    border:1px solid #EBEBEB;
+    background-color:#EBEBEB;
+}
+
+
+QPushButton#ptnOk:pressed,#btnCancle:pressed{
+    border-radius: 2px;
+    border:1px solid #D6D6D6;
+    background-color:#D6D6D6;
+}
+QPushButton#btnClose{
+	border-top-right-radius: 4px;
+    border:1px solid #00000000;
+    background-color:#FFFFFF;
+}
+
+QPushButton#btnClose:hover{
+    background-color:#FF0000;
+}
+QPushButton#btnClose:pressed{
+    background-color:#A30707;
+}
+
+QWidget#page,#page_2,#page_3
+{
+	background-color:#EAEAEA;
+}
+
+QLineEdit
+{
+border:1px solid #D6D6D6;
+    background-color:#FFFFFF;
+}
+QLineEdit:hover{
+    border-radius: 2px;
+    border:1px solid #EBEBEB;
+     background-color:#FFFFFF;
+}
+
+
+
+
+</string>
+  </property>
+  <widget class="QWidget" name="widget_bkg" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>350</width>
+     <height>440</height>
+    </rect>
+   </property>
+   <widget class="QWidget" name="TitleBar" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>350</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <widget class="QPushButton" name="btnClose">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>5</y>
+       <width>30</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>X</string>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_title">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>0</y>
+       <width>201</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>30</y>
+      <width>364</width>
+      <height>410</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>350</width>
+      <height>410</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>410</height>
+     </size>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <property name="leftMargin">
+      <number>1</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>1</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QWidget" name="widget_3" native="true">
+       <property name="minimumSize">
+        <size>
+         <width>348</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>348</width>
+         <height>40</height>
+        </size>
+       </property>
+       <widget class="QLabel" name="label_6">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>12</y>
+          <width>71</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>检索关键字:</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>5</y>
+          <width>241</width>
+          <height>30</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <widget class="QStackedWidget" name="stackedWidget">
+       <property name="minimumSize">
+        <size>
+         <width>348</width>
+         <height>340</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>348</width>
+         <height>340</height>
+        </size>
+       </property>
+       <property name="currentIndex">
+        <number>2</number>
+       </property>
+       <widget class="QWidget" name="page">
+        <widget class="QLabel" name="label">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>44</y>
+           <width>101</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>输入要转移到的id：</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_id">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>40</y>
+           <width>141</width>
+           <height>31</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_2">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>110</y>
+           <width>91</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>转移的原因：</string>
+         </property>
+        </widget>
+        <widget class="QTextEdit" name="textEdit_resons">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>130</y>
+           <width>251</width>
+           <height>131</height>
+          </rect>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="page_3">
+        <widget class="QListWidget" name="listWidget_relation">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>30</y>
+           <width>221</width>
+           <height>121</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_3">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>10</y>
+           <width>121</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>选择要转移的联系人：</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_4">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>160</y>
+           <width>81</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>转移的原因：</string>
+         </property>
+        </widget>
+        <widget class="QTextEdit" name="textEdit_resonscollage">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>180</y>
+           <width>221</width>
+           <height>141</height>
+          </rect>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="page_2">
+        <widget class="QLabel" name="label_5">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>160</y>
+           <width>91</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>转移原因(必填)：</string>
+         </property>
+        </widget>
+        <widget class="QTextEdit" name="textEdit_page2">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>180</y>
+           <width>311</width>
+           <height>121</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QTreeWidget" name="treeWidget">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>10</y>
+           <width>311</width>
+           <height>141</height>
+          </rect>
+         </property>
+         <column>
+          <property name="text">
+           <string/>
+          </property>
+         </column>
+        </widget>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <widget class="QWidget" name="widget_2" native="true">
+       <widget class="QPushButton" name="btnCancle">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>2</y>
+          <width>45</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>放弃</string>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btnOk">
+        <property name="geometry">
+         <rect>
+          <x>270</x>
+          <y>2</y>
+          <width>45</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>确定</string>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

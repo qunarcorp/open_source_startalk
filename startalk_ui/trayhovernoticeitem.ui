@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TrayHoverNoticeItem</class>
+ <widget class="QWidget" name="TrayHoverNoticeItem">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>260</width>
+    <height>47</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>TrayHoverNoticeItem</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#TrayHoverNoticeItem
+{
+	border:none;
+	background:#00000000;
+}
+QLabel#header
+{
+	max-height:33px;
+	max-width:33px;
+	min-height:33px;
+	min-width:33px;
+}
+
+QLabel#name
+{
+	font:bold;
+}
+
+QLabel#count{
+	max-height:14px;
+    font-size: 12px;
+    color: #FFFFFF;
+    background:#D75962;
+	padding:2px;
+	border-radius:7px;
+}</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="QLabel" name="header">
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="name">
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>178</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QLabel" name="count">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>18</height>
+      </size>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="localman.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,154 @@
+
+
+
+#NewsDialog QWidget{
+    font-family:"微软雅黑";
+}
+
+
+#NewsDialog QLineEdit{
+    background-color: #00000000;
+    border:none;
+	color:#666666;
+	font-size:12px;
+}
+
+#NewsDialog QLabel#name
+{
+	font: 75 16pt "微软雅黑";
+}
+
+
+
+#NewsDialog QWidget#widgetBorder{
+    border: none;
+    border-radius: 0px;
+    
+}
+
+
+#NewsDialog QWidget#webView
+{
+    background:#00000000;
+}
+
+#NewsDialog QWidget#webviewFrame
+{
+    background:#FFFFFF;
+    border:#FF0000;
+}
+ 
+
+#NewsDialog QWidget#spider_0{
+    background-color: #E0E0E0;
+}
+
+#NewsDialog QWidget#border{
+    background-color: #FFFFFF;
+}
+
+#NewsDialog QWidget#border_3{
+    background-color: #FFFFFF;
+}
+
+#NewsDialog QWidget#fontpage{
+    background-color: #FFFFFF;
+}
+
+#NewsDialog QWidget#barpanel{
+	border:none;
+    background: #FFFFFF;
+}
+
+#NewsDialog QWidget#frametextedit{
+    background-color: #FFFFFF;
+}
+
+#NewsDialog QTextEdit#textEdit{
+    border:none;
+	background-color: #00000000;
+}
+
+/* 工具条 */
+
+#NewsDialog QPushButton#trace{  
+    border:none;
+    image : url(:/Images/icon_go.png);
+}
+
+
+
+#NewsDialog QPushButton#pushButton_muc{  
+    border:1px solid #00000000;
+    image : url(:/Images/titlebar_function_addMember_normal.png);
+}
+
+
+#NewsDialog QPushButton#pushButton_muc:hover{
+    image : url(:/Images/titlebar_function_addMember_down.png);
+}
+
+
+#NewsDialog QPushButton#pushButton_muc:pressed{
+    image : url(:/Images/titlebar_function_addMember_down.png);
+}
+
+
+#NewsDialog QPushButton#sendmail{  
+    border:none;
+    margin-right:6px;
+    image : url(:/Images/icon/mail.png);
+}
+
+
+#NewsDialog QPushButton#sendmail:hover,
+#NewsDialog QPushButton#sendmail:checked,
+#NewsDialog QPushButton#sendmail:pressed{
+    image : url(:/Images/icon/mail_hover.png);
+}
+
+
+
+#NewsDialog QPushButton#sendbtn{
+    border-radius: 0px;
+    color:#666666;
+    border:1px solid #E5E5E5;
+    background-color:#FFFFFF;
+}
+
+
+#NewsDialog QPushButton#sendbtn:hover{
+    color:#FFFFFF;
+    background-color:#38C738;
+}
+
+#NewsDialog QPushButton#sendbtn:pressed{
+    color:#FFFFFF;
+    background-color:#2FB82F;
+}
+
+
+
+
+#NewsDialog QPushButton#productbtn{
+    border-radius: 0px;
+    color:#666666;
+    border:1px solid #E5E5E5;
+    background-color:#FFFFFF;
+}
+
+
+#NewsDialog QPushButton#productbtn:hover{
+    color:#FFFFFF;
+    background-color:#38C738;
+}
+
+#NewsDialog QPushButton#productbtn:pressed{
+    color:#FFFFFF;
+    background-color:#2FB82F;
+}
+
+
+#NewsDialog QWidget#Titleswidget{
+    background-color:#D7D7D7;   
+}

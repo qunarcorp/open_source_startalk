@@ -1,0 +1,1561 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="./js/qwebchannel.js"></script>
+    <title>Chat</title>
+    <style type="text/css">
+        ::-webkit-scrollbar {
+            width: 12px;
+            height: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            border-radius: 0px;
+            background: #FFFFFF;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            border: 3px solid #FFFFFF;
+            border-radius: 6px;
+            background: rgb(172, 172, 172);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .msgbody {}
+
+        body,
+        div,
+        dl,
+        dt,
+        dd,
+        ul,
+        ol,
+        li,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        pre,
+        code,
+        form,
+        fieldset,
+        legend,
+        input,
+        textarea,
+        p,
+        blockquote,
+        th,
+        td,
+        hr,
+        button,
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        menu,
+        nav,
+        section {
+            margin: 0;
+            padding: 0;
+            font-family: '微软雅黑', '宋体';
+            -webkit-user-select: none;
+        }
+
+        .bk {}
+
+        .fn-clearfix:after {
+            content: ".";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        .systemnotify {
+            MARGIN-RIGHT: auto;
+            MARGIN-LEFT: auto;
+            TEXT-ALIGN: center;
+            color: #999999;
+            font-size: 12px;
+        }
+
+        .fn-clearfix {
+            display: inline-block;
+        }
+
+        * html .fn-clearfix {
+            height: 1%;
+        }
+
+        .fn-clearfix {
+            display: block;
+        }
+
+        .newline {
+            margin: 20px 10px 10px;
+            vertical-align: middle;
+        }
+
+        .self,
+        .other {}
+
+        .other .bubble,
+        .other .bubble9 {
+            float: left;
+        }
+
+        .self .bubble,
+        .self .bubble9 {
+            float: right;
+        }
+
+        .head {
+            width: 30px;
+            height: 30px;
+        }
+
+        .bubble {
+            color: #333333;
+            position: relative;
+            /*width: 200px;*/
+            /*height: 100px;*/
+            padding: 5px;
+            max-width: 85%;
+            min-width: 50px;
+            margin: 0 0px;
+            -webkit-border-radius: 3px;
+            border-radius: 2px;
+            border: 1px solid #b0d6d9;
+            background-color: #c1e5e9;
+            text-align: left;
+            vertical-align: middle;
+            word-wrap: break-word;
+            table-layout: fixed;
+            word-break: break-all;
+        }
+
+        .bubble9 {
+            color: #333333;
+            word-wrap: break-word;
+            table-layout: fixed;
+            word-break: break-all;
+            max-width: 100%;
+            text-align: left;
+            border-bottom: 15px;
+            border-top: 15px;
+            border-right: 15px;
+            border-left: 15px;
+            -webkit-border-fit: lines;
+        }
+
+        .bubble9.mc-local-sender {
+            -webkit-border-image: url(image/balloon_right.png) 30 29 30 29 !important;
+        }
+
+        .bubble9.mc-remote-sender {
+            -webkit-border-image: url(image/balloon_left.png) 30 29 30 29 !important;
+            ;
+        }
+
+        .bubble9.mc-remote-redpack {
+            border-radius: 4px;
+            font-size: 12px;
+            padding: 3px 10px;
+            background: #BBBBBB;
+        }
+
+        .balloon-inside {
+            color: #333333;
+            font-size: 12px;
+            font-family: '微软雅黑';
+            -webkit-user-select: text;
+        }
+
+        .self .balloon-inside {
+            margin: -8px -2px -8px -8px;
+            /*font-size:12px;*/
+        }
+
+        .other .balloon-inside {
+            margin: -8px -8px -8px -2px;
+            /*font-size:12px;*/
+        }
+
+        .bubble.left:before {
+            border-color: rgba(0, 0, 0, 0) #b0d6d9;
+            border-width: 0 7px 7px 0;
+            bottom: auto;
+            left: -7px;
+            top: 6px;
+        }
+
+        .bubble.right:before {
+            border-color: rgba(0, 0, 0, 0) #b0d6d9;
+            border-width: 0 0 7px 7px;
+            bottom: auto;
+            left: auto;
+            right: -7px;
+            top: 5px;
+        }
+
+        .bubble:before {
+            border-color: #5A8F00 rgba(0, 0, 0, 0);
+            border-style: solid;
+            border-width: 20px 20px 0;
+            bottom: -20px;
+            content: "";
+            display: block;
+            left: 40px;
+            position: absolute;
+            width: 0;
+        }
+
+        .bubble.left:after {
+            border-color: rgba(0, 0, 0, 0) #c1e5e9;
+            border-width: 0 5px 5px 0;
+            bottom: auto;
+            left: -5px;
+            top: 6px;
+        }
+
+        .bubble.right:after {
+            border-color: rgba(0, 0, 0, 0) #c1e5e9;
+            border-width: 0 0 5px 5px;
+            bottom: auto;
+            left: auto;
+            right: -5px;
+            top: 6px;
+        }
+
+        .bubble:after {
+            border-color: #FFFFFF rgba(0, 0, 0, 0);
+            border-style: solid;
+            border-width: 13px 13px 0;
+            bottom: -13px;
+            content: "";
+            display: block;
+            left: 47px;
+            position: absolute;
+            width: 0;
+        }
+
+        .history {
+            width: 150px;
+            margin: 3px auto;
+            margin-bottom: 5px;
+            text-align: center;
+            font-size: 14px;
+            -webkit-border-radius: 5px;
+            vertical-align: middle;
+        }
+
+        #loaded span:hover {
+            text-decoration: underline;
+            color: #1BA9BA;
+            cursor: pointer;
+        }
+
+        #filecard span {
+            text-decoration: underline;
+            color: #1BA9BA;
+            cursor: pointer;
+            font-size: 13px;
+        }
+
+        #filecard span:hover {
+            color: #0000FF;
+            cursor: pointer;
+        }
+
+    
+
+        .self .voice-secend {
+            vertical-align: middle;
+            padding-right: 5px;
+        }
+
+        .other .voice-secend {
+            vertical-align: middle;
+            padding-left: 5px;
+        }
+
+        .self .voice-icon {
+            vertical-align: middle;
+            padding-right: 5px;
+            display: none;
+        }
+
+        .other .voice-icon {
+            vertical-align: middle;
+            padding-left: 5px;
+            display: none;
+        }
+
+        .matype {
+            display: none;
+        }
+
+        .kx {
+            margin: 8px;
+            border: 0;
+            padding: 0;
+        }
+				.focus{
+  background: #ffff00; 
+  outline: none;
+  width:200px; height:200px;
+  line-height:200px;
+  border-radius:50%;
+  margin-bottom: 20px
+}
+.focus:focus {background: #c3c3c3}
+    </style>
+</head>
+<link href="./css/product.css" type="text/css" rel="stylesheet" />
+<link href="./css/chatmessage.css" type="text/css" rel="stylesheet" />
+<link href="./css/application.css" type="text/css" rel="stylesheet" />
+<body class="body bk" id="body">
+    <script src="./js/base.js"></script>
+    <div id="container">
+        <section data-use="section">
+        </section>
+    </div>
+    <script>
+        (function(host) {
+            (function(host) {
+                var _define = {
+                    'extend': function(source, target) {
+                        for (var key in source) {
+                            if (typeof target[key] == 'undefined')
+                                target[key] = source[key];
+                        }
+                    },
+
+                    'isArray': function(source) {
+                        return '[object Array]' == Object.prototype.toString.call(source);
+                    },
+
+                    'isString': function(source) {
+                        return '[object String]' == Object.prototype.toString.call(source);
+                    },
+
+                    'bind': function(func, scope) {
+                        var xargs = arguments.length > 2 ? [].slice.call(arguments, 2) : null;
+                        return function() {
+                            var fn = Common.isString(func) ? scope[func] : func,
+                                args = (xargs) ? xargs.concat([].slice.call(arguments, 0)) : arguments;
+                            return fn.apply(scope || fn, args);
+                        };
+                    },
+
+                    'stringFormat': function() {
+                        if (arguments.length == 0)
+                            return null;
+                        var value = arguments[0];
+                        for (var i = 1, count = arguments.length; i < count; i++) {
+                            var pattern = new RegExp('\\{' + (i - 1) + '\\}', 'gm');
+                            value = value.replace(pattern, arguments[i]);
+                        }
+                        return value;
+                    },
+
+                    'getByteLength': function(source) {
+                        return String(source).replace(/[^\x00-\xff]/g, "ci").length;
+                    },
+
+                    'subByte': function(source, length, tail) {
+                        source = String(source);
+                        tail = tail || '';
+                        if (length < 0 || this.getByteLength(source) <= length) {
+                            return source;
+                        }
+                        source = source.substr(0, length).replace(/([^\x00-\xff])/g, "\x241 ")
+                            .substr(0, length)
+                            .replace(/[^\x00-\xff]$/, "")
+                            .replace(/([^\x00-\xff]) /g, "\x241");
+                        return source + tail;
+                    },
+
+                    'loadCSS': function(url) {
+                        if (url.toLowerCase().indexOf('http') < 0)
+                            url = _StylePath + url + '?' + _Version;
+                        var link = document.createElement('link');
+                        link.type = 'text/css';
+                        link.rel = 'stylesheet';
+                        link.href = url;
+                        document.getElementsByTagName('head')[0].appendChild(link);
+                    },
+
+                    'loadJS': function(url, callback) {
+                        if (url.toLowerCase().indexOf('http') < 0)
+                            url = _ScriptPath + url + '?' + _Version;
+                        callback = typeof callback === 'function' ? callback : function() {};
+                        if (!url)
+                            callback();
+                        var script = document.createElement("script");
+                        script.type = "text/javascript";
+                        if (script.readyState) {
+                            script.onreadystatechange = function() {
+                                if (script.readyState == "loaded" || script.readyState == "complete") {
+                                    script.onreadystatechange = null;
+                                    callback();
+                                }
+                            };
+                        } else {
+                            script.onload = function() {
+                                callback();
+                            };
+                        }
+                        script.src = url;
+                        document.getElementsByTagName("head")[0].appendChild(script);
+                    },
+
+                    'loadScript': function(url, callback) {
+                        if (this.isArray(url)) {
+                            switch (url.length) {
+                                case 0:
+                                    if (callback)
+                                        callback();
+                                    break;
+                                case 1:
+                                    this.loadJS(url[0], callback);
+                                    break;
+                                default:
+                                    this.loadJS(url.shift(), this.bind(this.loadScript, this, url, callback));
+                                    break;
+                            }
+                        }
+                    },
+
+                    'setNative': function(data, container, url) {
+                        if (!url) url = 'ugcapp://setValue?';
+                        if (!container) container = $('body');
+                        var template = '<iframe src="{0}" frameborder="0" width="0" height="0" style="position: absolute;display:none;"></iframe>',
+                            param = '{0}={1}',
+                            html, params = [];
+                        for (var key in data)
+                            params.push(this.stringFormat(param, key, data[key]));
+                        var element = this.stringFormat(template, url + params.join('&'));
+                        $(element).appendTo(container).remove();
+                    },
+
+                    'queryString': function(key) {
+                        var result = location.search.match(new RegExp("[\?\&]" + key + "=([^\&]+)", "i"));
+                        if (result == null || result.length < 1)
+                            return "";
+                        return result[1];
+                    },
+
+                    'request': function(params) {
+                        var option = {
+                            'url': params['url'],
+                            'dataType': 'jsonp'
+                        }
+                        var data = params['data'],
+                            callback = params['callback'];
+                        if (data)
+                            option['data'] = data;
+                        if (callback)
+                            option['jsonpCallback'] = callback;
+                        $.ajax(option);
+                    },
+
+                    'preload': function(src, callback) {
+                        var temp = new Image;
+                        temp.setAttribute('src', src);
+                        var handler = function() {
+                            var data = {
+                                'src': src,
+                                'width': temp.width,
+                                'height': temp.height
+                            };
+                            if (callback)
+                                callback(data);
+                        };
+                        temp.onerror = function() {}; //todo
+                        if (temp.getAttribute('complete'))
+                            handler();
+                        else
+                            $(temp).one('load', handler);
+                        //Common.eventBind(temp, 'load', handler);
+                    },
+
+                    'resize': function(size, limit) {
+                        var result = {
+                            'width': size.width,
+                            'height': size.height
+                        }
+                        if (size.width > limit.width)
+                            result = {
+                                'width': limit.width,
+                                'height': Math.ceil(limit.width / size.width * size.height)
+                            };
+                        return result;
+                    },
+
+                    'trim': function(content) {
+                        return content.replace(/^\s|\s$/gi, '');
+                    },
+
+                    '$': function $(selector, context) {
+                        context = context || document;
+                        var obj1 = context.querySelector(selector);
+                        var obj2 = context.querySelectorAll(selector);
+                        var old = context.id,
+                            id = context.id = "__sizzle__";
+                        try {
+                            var query = '#' + context + ' ' + selector;
+
+                        } catch (e) {} finally {
+                            old ? context.id = old : context.removeAttribute("id");
+                        }
+                    },
+
+                    'setHTML': function(element, position, html) {
+                        if (element.insertAdjacentHTML) {
+                            element.insertAdjacentHTML(position, html);
+                        } else {
+                            var range = element.ownerDocument.createRange();
+                            position = position.toUpperCase();
+                            if (position == 'AFTERBEGIN' || position == 'BEFOREEND') {
+                                range.selectNodeContents(element);
+                                range.collapse(position == 'AFTERBEGIN');
+                            } else {
+                                var begin = position == 'BEFOREBEGIN';
+                                range[begin ? 'setStartBefore' : 'setEndAfter'](element);
+                                range.collapse(begin);
+                            }
+                            range.insertNode(range.createContextualFragment(html));
+                        }
+                        return element;
+                    },
+                    'parseTime': function(utc) {
+                        var d = new Date();
+                        var c = new Date(utc)
+
+
+                        function to24(value) {
+                            return value < 10 ? '0' + value : value;
+                        }
+
+                        if (d.toLocaleDateString() == c.toLocaleDateString())
+                            return (to24(c.getHours()) + ':' + to24(c.getMinutes()) + ':' + to24(c.getSeconds()))
+                        else
+                            return (c.getFullYear() + '/' + (c.getMonth() + 1) + '/' + c.getDate() + ' ' + to24(c.getHours()) + ':' + to24(c.getMinutes()) + ':' + to24(c.getSeconds()))
+                    }, //转换时间
+
+                    'ComputingTime': function() {
+                        var date = new Date;
+                        var c = (date.getMonth() + 1) + '/' + date.getDate() + '/' + date.getFullYear()
+                        return (Date.parse(c));
+                    }
+                }
+
+                var Common = host['Common'] ? Common.extend(_define, Common) : (host['Common'] = _define);
+            })(host);
+
+            var PAGE_API = {
+                'init': function(proto) {
+                    for (var key in proto)
+                        this[key] = proto[key];
+                },
+
+                'receive': function(data) //{'head': 'content': 'time': '','direction':'username':}
+                    {
+                        this.receiveHandler(data);
+                    },
+
+                'review': function(data) //{'head': 'content': 'time': '','direction': 'username': }
+                    {
+                        this.reviewHandler(data);
+                    },
+                'systemnotify': function(data) //string
+                    {
+                        this.systemnotifyHandler(data);
+                    },
+                'scrollToEnd': function() {
+                    setTimeout("window.scrollTo(0, document.body.clientHeight);", 200);
+                },
+                'setprogress': function(data) {
+                    this.setprogressHandler(data);
+                },
+                'setrecvprogress': function(data) {
+                    this.setrecvprogressHandler(data);
+                },
+                'setuploadover': function(data) {
+                    this.setuploadoverHandler(data);
+                },
+                'setUploadFail': function(data) {
+                    this.setuploadfailHandler(data);
+                },
+                'replaceImage': function(data) {
+                    this.replaceImageByid(data);
+                },
+                'selectAll': function() {
+                    this.setselectAll();
+                },
+                'selectcopy': function() {
+                    this.setselectcopy();
+                },
+				'showkeepMsgCount':function(data)
+				{
+					this.setshowkeepMsgCount(data);
+				},
+				'keepCurrentPageMessageCount':function()
+				{
+					this.setkeepCurrentPageMessageCount();
+				},
+				'cleanEmptyPage':function()
+				{
+					this.setcleanEmptyPage();
+				}
+				
+
+            }
+
+            var CONST = {
+                'URL': {},
+                'CALLBACK': {},
+                'TEMPLATE': {
+                    'SENTENCE': '<div data-use="newline" class="newline fn-clearfix">\
+                                        <div data-use="message" class="{0}">\
+                                            <span class="msgbody"> \
+                                            <span data-user="icon" class="head"><img src="{1}" width="30px" height="30px" /></span>\
+                                            <span class="head1">{4} {5}</span><br>\
+                                            <div class="{3}">\
+                                            <p data-user="message" class="balloon-inside">{2}</p>\
+                                        </span> \
+                                        </div>\
+                                         </div>\
+                                    </div>',
+                    'CHAT_LEFT': '<div  align="left" class="other" ><table  width="80%"> \
+                                    <tr>\
+                                        <td width="50px" rowspan="2" align="center"  valign="top"><img src="{1}" width="30px" height="30px" /></td> \
+                                        <td><span id= "loaded" style="font-size: 12px; color:#666666">{4} (<span style="color:#0000FF; text-decoration:underline;" onclick=onPopMenuClick("{6}","{4}")>{6}</span>)  {5}</span></td>            \
+                                    </tr>\
+                                    <tr>\
+                                        <td>\
+                                        <div class=" bubble9 mc-remote-sender">\
+                                            <div data-user="message" class="balloon-inside">{2}</div></div>\
+                                        </td>   \
+                                    </tr>        \
+                                     <tr>\
+                                        <td height="10px"></td>\
+                                        <td></td>\
+                                    </tr>\
+                                    </table></div>',
+                    'CHAT_RIGHT': '<div  align="right" class="self" width="100%"><table width="80%"> \
+                                    <tr>\
+                                        <td align="right"><span style="font-size: 12px;color:#5ca2c8 ">{4} {5}</span></td>            \
+                                        <td width="50px" rowspan="2" align="center"  valign="top"><img src="{1}" width="30px" height="30px" /></td> \
+                                    </tr>\
+                                    <tr>\
+                                        <td align="right">\
+                                        <div class="bubble9 mc-local-sender">\
+                                            <div data-user="message" class="balloon-inside">{2}</div>\
+                                        </td>   \
+                                    </tr>        \
+                                     <tr>\
+                                        <td height="10px"></td>\
+                                        <td></td>\
+                                    </tr>\
+                                    </table></div>',
+                    'SYSTEMNOTIFY': '<div data-use="newline" class="fn-clearfix systemnotify">{0}</div>',
+                    'TIME': '<div class="timewrap" data-use="time"><span class="time">{0}</span></div>',
+                    'TIME2': '<div class="timewrap" data-use=\'time\' data-value="{1}"><span class="time">{0}</span></div>',
+                    'HISTORY': '<div class="history" > \
+                            <table id="loaded" style="margin: 0 auto;display:inline-block;" >\
+                                <tr >\
+                                    <td align="center">\
+                                        <img src="./image/historyicon.png" style="vertical-align:middle;height:13px;width:13px;">\
+                                    </td>\
+                                    <td valign="bottom">\
+                                        <span id="history" style="color:#1BA9BA;font-size:12px;margin-left:3px;">查看更多消息</span>\
+                                    </td>\
+                                </tr>\
+                            </table>\
+                            <table id="loading" style="margin: 0 auto;display:none;">\
+                                <tr>\
+                                    <td align="center">\
+                                        <img src="./image/loading.gif" style="vertical-align:middle;height:13px;width:13px">\
+                                    </td>\
+                                </tr>\
+                            </table>\
+                            <table id="loadover" style="margin: 0 auto;display:none;">\
+                                <tr>\
+                                    <td align="center">\
+                                        <span id="history" data-use="history"style="vertical-align:middle;color:#1BA9BA;font-size:12px;" >已经没有更多消息了</span>\
+                                    </td>\
+                                </tr>\
+                            </table>\
+                            <a href="#history_anchor" id="history_anchor_sender"/>\
+                        </div>',
+                    'ANCHOR': '<a name="history_anchor" id="history_anchor"/>'
+                },
+                'DIRECTION': {
+                    'UP': 0,
+                    'DOWN': 1
+                },
+                'POSOTION': {
+                    'BeforeBegin': 'BEFOREBEGIN',
+                    'BeforeEnd': 'BEFOREEND',
+                    'AfterBegin': 'AFTERBEGIN',
+                    'AfterEnd': 'AFTEREND'
+                }
+            };
+
+
+            var PAGE = {
+                'run': function() {
+                    this.load();
+                    this.render();
+                    this.compose();
+                    this.bind();
+                    this.start();
+                    initthis();
+                },
+
+                'load': function() {
+
+                },
+
+                'render': function() {
+					
+                    this.container = document.getElementById('container');
+                    this.list = this.container.querySelector('[data-use="section"]');
+                    this.flag = true;
+                    getMsgBubbleOldestTime();
+					getMsgBubbleLastestTime();
+                    Common.setHTML(this.container,
+                        CONST.POSOTION.AfterBegin,
+                        CONST.TEMPLATE.HISTORY);
+
+                    this.history = document.getElementById('history');
+
+                    this.history.addEventListener('click', Common.bind(function() {
+                        if (!this.flag) return;
+                        this.flag = false;
+                        CLIENT_API.review(getMsgBubbleOldestTime(), getScrollposInhtml());
+						//把之前的高度可视区域和可视区域下面隐藏的部分传出去，存放起来
+						
+                    }, this)); //点击历史记录
+
+                },
+
+                'compose': function() {
+
+                    PAGE_API.init({
+                        'receiveHandler': Common.bind(function(data) {
+                            this.receive(data);
+                        }, this),
+                        'reviewHandler': Common.bind(this.review, this),
+                        'systemnotifyHandler': Common.bind(this.systemnotify, this),
+                        'setprogressHandler': Common.bind(this.setprogress, this),
+                        'setrecvprogressHandler': Common.bind(this.setrecvprogress, this),
+                        'replaceImageByid': Common.bind(this.replaceimg, this),
+                        'setuploadoverHandler': Common.bind(this.setuploadover, this),
+                        'setuploadfailHandler': Common.bind(this.setUploadFail, this),
+                        'setselectAll': Common.bind(this.selectAll, this),
+                        'setselectcopy': Common.bind(this.selectcopy, this),
+						'setshowkeepMsgCount':Common.bind(this.showkeepMsgCount, this),
+						'setkeepCurrentPageMessageCount':Common.bind(this.keepCurrentPageMessageCount, this),
+						'setcleanEmptyPage':Common.bind(this.cleanEmptyPage, this)
+
+                    });
+
+                    this.latebinding = function(data) {
+
+                        this.receive = function(data) {
+
+                            var html = '',
+                                htmlTime = '',
+                                section = data['section'],
+                                sectionLast = section[section.length - 1],
+                                sectionLastT = section[section.length - 1]['time'];
+
+                            var latestShowTime = getLastestTime();
+
+                            var timespan = sectionLastT - latestShowTime;
+                            if (timespan >= 1000 * 60 * 2) {
+                                var timeStr = Common.parseTime(sectionLastT);
+                                html += Common.stringFormat(CONST.TEMPLATE.TIME2, timeStr, sectionLastT);
+                            }
+
+                            var htmlString = sectionLast['htmlContext'];
+                            if (htmlString != undefined && htmlString != "") {
+                                html += htmlString;
+                            } else {
+                                var side;
+                                if (sectionLast['self'])
+                                    side = CONST.TEMPLATE.CHAT_RIGHT;
+                                else
+                                    side = CONST.TEMPLATE.CHAT_LEFT;
+
+                                html += Common.stringFormat(side,
+                                    sectionLast['self'] ? 'self' : 'other',
+                                    sectionLast['head'],
+                                    sectionLast['content'],
+                                    sectionLast['self'] ? 'bubble9 mc-local-sender' : 'bubble9 mc-remote-sender',
+                                    sectionLast['username'],
+                                    Common.parseTime(sectionLast['time'])
+                                );
+                            }
+
+                            var isneed = isNeedShowPopTip();
+                            Common.setHTML(this.list,
+                                data['direction'] == CONST.DIRECTION.DOWN ?
+                                CONST.POSOTION.BeforeEnd : CONST.POSOTION.AfterBegin,
+                                html);
+
+                            if (!!data['hasHistory']) {
+                                this.history.style.display = 'block';
+                            }
+                            if (!sectionLast['self']) {
+                                // 0 强制滚动
+                                // 1 智能滚动
+                                // 2 强制不滚
+                                var scrollflag = data['autoscroll'];
+                                if (2 != scrollflag) {
+                                    if (isneed == 1 && scrollflag == 1) {
+                                        showNewMessageTip(sectionLast['username'], sectionLast['msgId']);
+                                    } else {
+                                        setTimeout("window.scrollTo(0, document.body.clientHeight);", 200);
+										<!--PAGE_API.keepCurrentPageMessageCount();-->
+                                    }
+                                }
+                            } else {
+                                // 自己的消息滚动
+                                setTimeout("window.scrollTo(0, document.body.clientHeight);", 200);
+								<!--PAGE_API.keepCurrentPageMessageCount();-->
+                            }
+                        }
+                        this.receive(data)
+                    }
+
+
+                },
+
+                'bind': function() {},
+
+                'start': function() {},
+
+                receive: function(data) {
+                    this.latebinding(data);
+                },
+
+                review: function(data) {
+                    if (0 == data['section'].length) {
+                        // 已经没有消息了显示
+                        document.getElementById("loading").style.display = 'none';
+                        document.getElementById("loaded").style.display = 'none';
+                        document.getElementById("loadover").style.display = 'inline-block';
+                        return;
+                    }
+                    var html = '',
+                        section = data['section'],
+                        _temp = '',
+                        lastGroup = this.container.querySelector('[data-use="time"]'),
+                        sectionLast = section[section.length - 1],
+                        sectionLastT = section[section.length - 1]['time'];
+                    var hasmore = data['hasHistory'];
+                    if (0 == hasmore) {
+                        // 已经没有消息了显示
+                        document.getElementById("loading").style.display = 'none';
+                        document.getElementById("loaded").style.display = 'none';
+                        document.getElementById("loadover").style.display = 'inline-block';
+                    } else {
+                        document.getElementById("loading").style.display = 'none';
+                        document.getElementById("loaded").style.display = 'inline-block';
+                        document.getElementById("loadover").style.display = 'none';
+                    }
+
+                   // var timeSpanEarliestTime = getOldestTime(); // 已经存在了的时间最早的时间节点
+                    var sectionCurT  = 0;
+                    var size = section.length - 1;
+					jslog("size= " + size);
+					var timeSpanEarliestTimeFixValue = getOldestTime();
+					jslog("timeSpanEarliestTimeFixValue= "+timeSpanEarliestTimeFixValue);
+                    for (var i = size; i >= 0; i--) {
+						html='';
+                        sectionCurT = section[i]['time'];
+						jslog("into for sectionCurT=" + sectionCurT);
+						
+                        
+						if(timeSpanEarliestTimeFixValue ==0 )
+						{
+							jslog("into for timeSpanEarliestTimeFixValue==0");
+							//显示消息
+							var htmlContext = section[i]['htmlContext'];
+							if (htmlContext != undefined && htmlContext != "") {
+                            html = htmlContext + html;
+							timeSpanEarliestTimeFixValue = sectionCurT;
+							}
+							
+						}
+						else
+						{
+							jslog("into for timeSpanEarliestTimeFixValue!=0");
+							if(getOldestTime() == 0)
+							{
+								jslog("into for getOldestTime()=0");
+								var timespan = timeSpanEarliestTimeFixValue - sectionCurT;
+								jslog("into for timeSpanEarliestTimeFixValue - sectionCurT = " + timespan);
+								if (timespan > 1000 * 60 * 2 && (getMsgBubbleOldestTime() > 0)  ) 
+								{
+
+									var showtime = Common.parseTime(getMsgBubbleOldestTime());
+									var htmlTime = Common.stringFormat(CONST.TEMPLATE.TIME2, showtime, getMsgBubbleOldestTime());
+									
+									html = htmlTime + html;
+									timeSpanEarliestTimeFixValue = sectionCurT;
+			
+								}
+							}
+							else
+							{
+							
+								if(getMsgBubbleOldestTime() < getOldestTime() )
+								{
+									jslog("into for getOldestTime() !=0");
+									//getMsgBubbleOldestTime() - sectionCurT > 2分钟
+									//getOldestTime() -getMsgBubbleOldestTime() > 2分钟
+									//getOldestTime() - sectionCurT > 2分钟
+									var timespan = timeSpanEarliestTimeFixValue - sectionCurT;
+									jslog("into for getOldestTime() !=0  timeSpanEarliestTimeFixValue - sectionCurT = " + timespan);
+									jslog("into for getOldestTime() !=0 getOldestTime()=" + getOldestTime());
+									jslog("into for getOldestTime() !=0 getMsgBubbleOldestTime()="+getMsgBubbleOldestTime());
+									if (timespan > 1000 * 60 * 2 && (getMsgBubbleOldestTime() > 0)
+									/*&& (getOldestTime() -getMsgBubbleOldestTime()> 1000 * 60 * 2)*/ ) 
+									{
+										jslog("into for getOldestTime() !=0  getMsgBubbleOldestTime() > 0 and getOldestTime() -getMsgBubbleOldestTime()> 1000 * 60 * 2");
+										
+											
+				
+										if(getMsgBubbleOldestTime() - sectionCurT > 1000 * 60 * 2 ) //看看时间的差值是否大于2分钟
+										{
+											var showtime = Common.parseTime(getMsgBubbleOldestTime());
+											var htmlTime = Common.stringFormat(CONST.TEMPLATE.TIME2, showtime, getMsgBubbleOldestTime());
+									
+											html = htmlTime + html;
+											timeSpanEarliestTimeFixValue = sectionCurT;
+										}
+										
+									
+									
+									
+									
+									}
+									if (timespan < 1000 * 60 * 2 && getMsgBubbleOldestTime() > 0 && (getOldestTime() - getMsgBubbleOldestTime() > 1000 * 60 * 2 ))
+									{
+										jslog("into for getOldestTime() !=0  timespan < 1000 * 60 * 2 and getOldestTime() -getMsgBubbleOldestTime()> 1000 * 60 * 2");
+										jslog("getOldestTime()=" + getOldestTime());
+										jslog("getMsgBubbleOldestTime()="+getMsgBubbleOldestTime());
+										var dex = getOldestTime() -getMsgBubbleOldestTime();
+										jslog("getOldestTime() -getMsgBubbleOldestTime() =" + dex);
+									
+									
+										var showtime = Common.parseTime(getMsgBubbleOldestTime());
+										var htmlTime = Common.stringFormat(CONST.TEMPLATE.TIME2, showtime, getMsgBubbleOldestTime());
+									
+										html = htmlTime + html;
+										timeSpanEarliestTimeFixValue = sectionCurT;
+									
+									}
+								}
+								else
+								{
+									jslog("into for getOldestTime() !=0");
+									//getMsgBubbleOldestTime() - sectionCurT > 2分钟
+									//getOldestTime() -getMsgBubbleOldestTime() > 2分钟
+									//getOldestTime() - sectionCurT > 2分钟
+									var timespan = timeSpanEarliestTimeFixValue - sectionCurT;
+									jslog("into for getOldestTime() !=0  timeSpanEarliestTimeFixValue - sectionCurT = " + timespan);
+									jslog("into for getOldestTime() !=0 getOldestTime()=" + getOldestTime());
+									jslog("into for getOldestTime() !=0 getMsgBubbleOldestTime()="+getMsgBubbleOldestTime());
+									if (timespan > 1000 * 60 * 2 && (getMsgBubbleOldestTime() > 0)
+									/*&& (getOldestTime() -getMsgBubbleOldestTime()> 1000 * 60 * 2)*/ ) 
+									{
+										jslog("into for getOldestTime() !=0  getMsgBubbleOldestTime() > 0 and getOldestTime() -getMsgBubbleOldestTime()> 1000 * 60 * 2");
+										
+											
+				
+										/*if(getMsgBubbleOldestTime() - sectionCurT > 1000 * 60 * 2 ) //看看时间的差值是否大于一小时
+										{
+											var showtime = Common.parseTime(getMsgBubbleOldestTime());
+											var htmlTime = Common.stringFormat(CONST.TEMPLATE.TIME2, showtime, getMsgBubbleOldestTime());
+									
+											html = htmlTime + html;
+											timeSpanEarliestTimeFixValue = sectionCurT;
+										}*/
+										
+									
+									
+									
+									
+									}
+									if (timespan < 1000 * 60 * 2 && getMsgBubbleOldestTime() > 0 && (getOldestTime() - getMsgBubbleOldestTime() > 1000 * 60 * 2 ))
+									{
+										jslog("into for getOldestTime() !=0  timespan < 1000 * 60 * 2 and getOldestTime() -getMsgBubbleOldestTime()> 1000 * 60 * 2");
+										jslog("getOldestTime()=" + getOldestTime());
+										jslog("getMsgBubbleOldestTime()="+getMsgBubbleOldestTime());
+										var dex = getOldestTime() -getMsgBubbleOldestTime();
+										jslog("getOldestTime() -getMsgBubbleOldestTime() =" + dex);
+									
+									
+										var showtime = Common.parseTime(getMsgBubbleOldestTime());
+										var htmlTime = Common.stringFormat(CONST.TEMPLATE.TIME2, showtime, getMsgBubbleOldestTime());
+									
+										html = htmlTime + html;
+										timeSpanEarliestTimeFixValue = sectionCurT;
+									
+									}
+								}
+							
+							
+							
+								
+								
+								
+							
+							}	
+							var htmlContext = section[i]['htmlContext'];
+							if (htmlContext != undefined && htmlContext != "") 
+							{
+								html = htmlContext + html;
+								timeSpanEarliestTimeFixValue = sectionCurT;
+							}
+							
+						}  
+                        
+						
+						Common.setHTML(this.list,
+                        data['direction'] == CONST.DIRECTION.DOWN ?
+                        CONST.POSOTION.BeforeEnd : CONST.POSOTION.AfterBegin,
+                        html);
+						
+						
+                    }
+					html='';
+                    // 消息列表中最后一条消息没人跟他比了，做最后的检查，防止最后一条消息上面没有时间
+                    // 也有可能上面所有消息的时间块都在同一个块中，
+                    if ((0 == getOldestTime() || getMsgBubbleOldestTime() < getOldestTime()) && (sectionCurT > 0) ) {
+                        var showtime = Common.parseTime(sectionCurT);
+                        var htmlTime = Common.stringFormat(CONST.TEMPLATE.TIME2, showtime, sectionCurT);
+                        html = htmlTime + html;
+                    }
+
+                    Common.setHTML(this.list,
+                        data['direction'] == CONST.DIRECTION.DOWN ?
+                        CONST.POSOTION.BeforeEnd : CONST.POSOTION.AfterBegin,
+                        html);
+
+                    if (!!data.hasHistory) {
+                        this.history.style.display = 'block';
+                    }
+
+                    this.flag = true;
+
+                    document.getElementById("history_anchor_sender").click(); // 触发锚点
+
+                    // 添加新锚点
+                    Common.setHTML(this.list,
+                        data['direction'] == CONST.DIRECTION.DOWN ?
+                        CONST.POSOTION.BeforeEnd : CONST.POSOTION.AfterBegin,
+                        CONST.TEMPLATE.ANCHOR);
+                },
+
+                systemnotify: function(data) {
+                    var html = '';
+                    html += Common.stringFormat(CONST.TEMPLATE.SYSTEMNOTIFY, data);
+                    Common.setHTML(this.list, CONST.POSOTION.BeforeEnd, html);
+                },
+				showkeepMsgCount:function(data)
+				{
+					
+					var html='';
+					var firsttmInt = parseInt(data);
+					var showtime = Common.parseTime(firsttmInt);
+	
+					html += Common.stringFormat(CONST.TEMPLATE.TIME2, showtime, firsttmInt);
+					Common.setHTML(this.list,
+								CONST.POSOTION.AfterBegin,
+								html);
+								
+				},
+				keepCurrentPageMessageCount:function()
+				{
+					return;
+					//获取页面html中的消息条数
+					//包括居中的时间，包括消息，包括’以下是未读消息‘等提示信息
+					//jslog("keepCurrentPageMessageCount into");
+					var list = document.querySelector('[data-use="section"]');
+					var childnode = list.children;
+					var nlength = childnode.length;
+					var unreadMsgTip = document.getElementById("unreadtipkey_57847cb4cfa94268b2d39f4e6e70ee6c");
+				//	jslog('unreadMsgTip ' + unreadMsgTip);
+				//	jslog('nlength = ' + nlength + 'currentPagemsgcount=' + CurrentPageMsgCount);
+					var removeitem = false;
+					if( (nlength > CurrentPageMsgCount) && (unreadMsgTip==null) )
+					{
+						//jslog('nlength > CurrentPageMsgCount) && unreadMsgTip' );
+						for(var i = 0; i < nlength - CurrentPageMsgCount; i++)
+						{
+							var node = childnode[0];
+							node.parentNode.removeChild(node);
+							removeitem = true;
+						}
+		
+						//接着看第一条信息和第二条信息的时间的比较
+						var firsttime = childnode[0].getAttribute("data-value");
+						var secondtime = childnode[1].getAttribute("data-value");
+		
+						var firsttype = childnode[0].getAttribute("data-use");
+						var secondtype = childnode[1].getAttribute("data-use");
+						//第一条消息不是newline 类型的信息
+		
+		
+						if( (firsttime != null) && (firsttime  < secondtime) )
+						{
+							//jslog( 'add header msg firsttime != null) && (firsttime  < secondtime)' );
+							PAGE_API.showkeepMsgCount(firsttime);		
+						}
+						if( firsttime == null )
+						{
+							//jslog( 'add header msg firsttime == null' );
+							PAGE_API.showkeepMsgCount(secondtime);
+						}
+						if( (firsttime == secondtime) && (firsttype == secondtype) )
+						{
+							//jslog( 'add header msg (firsttime == secondtime) && (firsttype == secondtype)' );
+							PAGE_API.showkeepMsgCount(firsttime);
+						}
+						//如果有消息删除重置一下获取历史记录
+						if(removeitem)
+						{
+							this.flag = true;
+							document.getElementById("loading").style.display = 'none';
+							document.getElementById("loaded").style.display = 'inline-block';
+							document.getElementById("loadover").style.display = 'none';
+						}
+					}
+				},
+                replaceimg: function(data) {
+                    var id = data['id'];
+                    var src = data['src'];
+                    var w = data['w'];
+                    var h = data['h'];
+
+                    if (id != '' && src != '' && w != 0 && h != 0) {}
+                    if (document.getElementById(id) != undefined) {
+                        document.getElementById(id).src = src;
+                        document.getElementById(id).width = w;
+                        document.getElementById(id).height = h;
+                    }
+                },
+                setScroll: function() {
+                    var h = document.documentElement.scrollHeight || document.body.scrollHeight;
+                    window.scrollTo(0, document.body.clientHeight);
+                    
+                }, //设置滚动条
+                setprogress: function(data) {
+                    
+                    
+                    var sectionid = data['sectionid'],
+                        provalue = data['myprovalue'];
+                    if (document.getElementById(sectionid + "_PROGRESS_BAR") != undefined) {
+                        document.getElementById(sectionid + "_PROGRESS_BAR").value = provalue;
+                        if (provalue == 1) {
+                            document.getElementById(sectionid + "_PROGRESS_BAR").style.display = 'none';
+                            document.getElementById(sectionid + "_IGNORE").style.display = 'none';
+                            document.getElementById(sectionid + "_SENDPANEL").style.display = 'none';
+                            document.getElementById(sectionid + "_SPIDERLINE").style.display = 'none';
+                            document.getElementById(sectionid + "_ERR_TIP").style.display = 'none';
+                            document.getElementById(sectionid + "_TIP").style.display = 'block';
+                        }
+                    }
+                },
+                setuploadover: function(data) {
+                    var sectionid = data['sectionid'];
+                    if (document.getElementById(sectionid + "_PROGRESS_BAR") != undefined) {
+                        document.getElementById(sectionid + "_PROGRESS_BAR").style.display = 'none';
+                        document.getElementById(sectionid + "_IGNORE").style.display = 'none';
+                        document.getElementById(sectionid + "_SENDPANEL").style.display = 'none';
+                        document.getElementById(sectionid + "_SPIDERLINE").style.display = 'none';
+                        document.getElementById(sectionid + "_ERR_TIP").style.display = 'none';
+                        document.getElementById(sectionid + "_TIP").style.display = 'block';
+                    }
+                },
+                setUploadFail: function(data) {
+                    var sectionid = data['sectionid'];
+
+                    if (document.getElementById(sectionid + "_PROGRESS_BAR") != undefined) {
+                        document.getElementById(sectionid + "_PROGRESS_BAR").style.display = 'none';
+                        document.getElementById(sectionid + "_IGNORE").style.display = 'none';
+                        document.getElementById(sectionid + "_SEND_BUTTON").style.display = 'none';
+                        document.getElementById(sectionid + "_TIP").style.display = 'none';
+                        document.getElementById(sectionid + "_ERR_TIP").style.display = 'block';
+                        document.getElementById(sectionid + "_RESEND_BUTTON").style.display = 'block';
+                    }
+                },
+
+                setrecvprogress: function(data) {
+                    var sectionid = data['sectionid'],
+                        provalue = data['myprovalue'],
+                        srcsuccess = data['srcimage'],
+                        filename = data['filename'];
+
+                    if (document.getElementById(sectionid + "_PROGRESS_BAR") != undefined) {
+                        document.getElementById(sectionid + "_PROGRESS_BAR").value = provalue;
+                        if (provalue == 1) {
+                            console.log(document.getElementById(sectionid + "_RECVPANEL").style.display);
+                            document.getElementById(sectionid + "_PROGRESS_BAR").style.display = 'none';
+                            document.getElementById(sectionid + "_RECVPANEL").style.display = 'none';
+                            document.getElementById(sectionid + "_RECV").style.display = '';
+                            document.getElementById(sectionid + "_RECVEDPANEL").style.display = '';
+
+                        }
+                        else  if (document.getElementById(sectionid + "_PROGRESS_BAR") != undefined) {
+                            document.getElementById(sectionid + "_PROGRESS_BAR").style.display = 'block';
+                            document.getElementById(sectionid + "_RECV").style.display = 'none';
+                        }
+                    }
+                },
+                selectAll: function() {
+                    window.document.execCommand("SelectAll", null, null);
+                },
+                selectcopy: function() {
+                    //window.document.execCommand("Copy");
+                    var userSelection, text;
+                    if (window.getSelection) {
+                        //现代浏览器
+                        userSelection = window.getSelection();
+                    } else if (document.selection) {
+                        //IE浏览器 考虑到Opera，应该放在后面
+                        userSelection = document.selection.createRange();
+                    }
+                    if (!(text = userSelection.text)) {
+                        text = userSelection;
+                    }
+                    //alert(text);
+                    //window.clipboardData.clearData();
+                    //window.clipboardData.setData('text',text);
+                    //document.execCommand("Copy");
+                    CLIENT_API.SetClipData(text);
+                },
+				cleanEmptyPage:function()
+				{
+					var list = document.querySelector('[data-use="section"]');
+					var childnode = list.children;
+					var nlength = childnode.length;
+					for(var i = 0; i < nlength; i++)
+					{
+						var node = childnode[0];
+						node.parentNode.removeChild(node);
+					}
+					this.flag = true;
+					document.getElementById("loading").style.display = 'none';
+					document.getElementById("loaded").style.display = 'inline-block';
+					document.getElementById("loadover").style.display = 'none';
+				}
+            }
+
+            host['PAGE_API'] = PAGE_API;
+            PAGE.run();
+
+        })(window);
+
+        function openUrl(url) {
+            CLIENT_API.openUrl(url);
+        }
+
+        function showNewMessageTip(name, message) {
+            CLIENT_API.showNewMessageTip(name, message);
+        }
+
+        function jslog(log) {
+            CLIENT_API.jslog(log);
+        }
+
+        function isNeedShowPopTip() {
+            var h = document.body.scrollTop;
+            var h1 = document.body.scrollHeight;
+            var h3 = window.innerHeight;
+            if ((h + h3 + 70) < h1) {
+                return 1;
+            } else {
+                return 0;
+            }
+        }
+        window.onscroll = function() {
+            var isneed = isNeedShowPopTip();
+            if (isneed != 1) {
+                CLIENT_API.hideNewMessageTip();
+            }
+            
+            var tipele = document.getElementById("unreadtipkey_57847cb4cfa94268b2d39f4e6e70ee6c");
+            if (tipele) {
+                var a = tipele.offsetTop;
+                var h = document.body.scrollTop;
+                var h1 = document.body.scrollHeight;
+                var h3 = window.innerHeight;
+                  if (a >= h && a < (h + h3)) {
+                      CLIENT_API.hideUpUnreadMessageTip();
+                  }
+            }
+
+          
+        }
+        window.onload = function() {
+            new QWebChannel(qt.webChannelTransport, function(channel) {
+
+                var clientapi = channel.objects.CLIENT_API;
+
+                CLIENT_API = clientapi;
+            });
+        }
+
+        function onCancelclicked(id) {
+            CLIENT_API.jsCancelSend(id);
+            console.log(document.getElementById(id + "_PROGRESS_BAR"));
+            if (document.getElementById(id + "_PROGRESS_BAR") != undefined) {
+                document.getElementById(id + "_PROGRESS_BAR").style.display = 'none';
+                document.getElementById(id + "_IGNORE").style.display = 'none';
+                document.getElementById(id + "_SEND_BUTTON").style.display = 'none';
+                document.getElementById(id + "_RESEND_BUTTON").style.display = 'none';
+                document.getElementById(id + "_SPIDERLINE").style.display = 'none';
+                document.getElementById(id + "_SENDPANEL").style.display = 'none';
+                document.getElementById(id + "_ERR_TIP").style.display = 'none';
+                document.getElementById(id + "_TIP").style.display = 'block'
+                document.getElementById(id + "_TIP").innerHTML = '已取消传输';
+            }
+
+        }
+
+        function onDownbuttonclick(data1, filemd5) {
+            var sectionid = data1;
+            if (document.getElementById(sectionid + "_PROGRESS_BAR") != undefined) {
+                document.getElementById(sectionid + "_PROGRESS_BAR").style.display = 'block';
+                document.getElementById(sectionid + "_RECV").style.display = 'none';
+            }
+            CLIENT_API.jsDownReciv(sectionid, filemd5);
+        }
+
+        function onSendbuttonclick(data1, data2) {
+            var sectionid = data1;
+            if (document.getElementById(sectionid + "_SEND_BUTTON") != undefined) {
+                document.getElementById(sectionid + "_PROGRESS_BAR").style.display = 'block';
+                document.getElementById(sectionid + "_IGNORE").style.display = '';
+                document.getElementById(sectionid + "_SEND_BUTTON").style.display = 'none';
+                document.getElementById(sectionid + "_RESEND_BUTTON").style.display = 'none';
+                document.getElementById(sectionid + "_ERR_TIP").style.display = 'none';
+                document.getElementById(sectionid + "_TIP").style.display = 'block'
+            }
+            CLIENT_API.jsSendFile(data1, data2);
+        }
+
+        function onSearchbuttonclick(data) {
+
+            //if(document.getElementById(id+ "_BUTTON") != undefined)
+            {
+                CLIENT_API.jsSearchRecivFile(data);
+            }
+        }
+
+        function onOpenFileclick(data) {
+            CLIENT_API.jsOpenFile(data);
+        }
+
+        function onSaveOther(data) {
+            CLIENT_API.jsSaveFile(data);
+        }
+
+
+        function onRecvCancelclicked(id) {
+            if (document.getElementById(id + "_IGNORE") != undefined) {
+                document.getElementById(id + "_RECV").style.display = 'none';
+                document.getElementById(id + "_IGNORE").style.display = 'none';
+                document.getElementById(id + "_SPIDERLINE").style.display = 'none';
+                document.getElementById(id + "_RECVEDPANEL").style.display = 'none';
+                document.getElementById(id + "_RECVPANEL").style.display = 'none';
+                document.getElementById(id + "_TIP").innerHTML = '已取消接收';
+            }
+        }
+
+        function getstyle(sname) {
+            for (var i = 0; i < document.styleSheets.length; i++) {
+                var rules;
+                if (document.styleSheets[i].cssRules) {
+                    rules = document.styleSheets[i].cssRules;
+                } else {
+                    rules = document.styleSheets[i].rules;
+                }
+                for (var j = 0; j < rules.length; j++) {
+                    var selectorText = rules[j].selectorText;
+                    if (selectorText == sname) {
+                        //selectorText 属性的作用是对一个选择的地址进行替换.意思应该是获取RULES[J]的CLASSNAME.有说错的地方欢迎指正
+                        return rules[j].style;
+                    }
+                }
+            }
+        }
+
+
+        function setMatypeDisplay(display) {
+            var localCSS = getstyle(".matype");
+            localCSS.display = display;
+        }
+
+
+        function setFont(fontname, size, color) {
+            var localCSS = getstyle(".balloon-inside");
+            localCSS.fontSize = size + "pt";
+            localCSS.fontFamily = fontname;
+            localCSS.color = color;
+        }
+
+        function setSelfColor(img) {
+            var localCSS = getstyle(".bubble9.mc-local-sender");
+            localCSS.cssText = " -webkit-border-image: url(" + img + ") 30 29 30 29 !important;";
+        }
+
+        function setOtherColor(img) {
+            var localCSS = getstyle(".bubble9.mc-remote-sender");
+            localCSS.cssText = " -webkit-border-image: url(" + img + ") 30 29 30 29 !important;";
+        }
+
+        function initthis() {
+            document.onkeydown = showKey; //不能用onkeyup 否则还是有动作的
+        }
+
+        function showKey(evt) {
+            evt = (evt) ? evt : window.event;
+            if (evt.keyCode == 32) {
+                if (CLIENT_API != undefined) {
+                    CLIENT_API.jsSpaceClicked();
+                }
+                return;
+            }
+        }
+
+        function onScrollToLoadMoreHistory(pos) {
+            if (pos != 0) {
+                return;
+            }
+            if ('none' != document.getElementById("loaded").style.display) {
+              //  console.log(document.getElementById("loaded").style.display);
+                document.getElementById("loaded").style.display = 'none';
+                document.getElementById("loading").style.display = 'inline-block';
+                document.getElementById("loadover").style.display = 'none';
+                document.getElementById("history").click();
+            }
+        }
+
+        function updateVoiceImage(id, img) {
+            var voiceimg = id + "_img";
+            document.getElementById(voiceimg).src = img;
+        }
+
+        
+
+     
+
+        // 组成员（别人）hover显示名片
+        function onOtherMouseEnter(userid) {
+            CLIENT_API.jsUserIdEnter(userid);
+        }
+        // 组成员（别人）leave 取消显示名片
+        function onOtherMouseLeave(userid) {
+            CLIENT_API.jsUserIdLeave(userid);
+        }
+
+		function video_loading( $video ){
+			$('.video_loading').show();
+
+			var timer = setInterval(function(){
+				var currentTime = $video[0].currentTime; // 检测当前的播放时间
+
+				if( currentTime>0 ){
+                $('.video_loading').hide();
+                clearInterval( timer );
+				}
+			}, 100)
+		}
+		
+        function nofind(id) {
+            var img = document.getElementById(id);
+            if (img.getAttribute("alt")) {
+                var text = document.createTextNode(img.alt);
+                img.parentNode.insertBefore(text, img);
+                img.parentNode.removeChild(img);
+            }
+        }
+
+		function appendUnreadMesageDownTip(messagecontent)
+		{
+			var x = document.getElementById('unreadtipkey_57847cb4cfa94268b2d39f4e6e70ee6c');
+			if(x)
+			{
+				unreadMsgTip = true;
+				return;
+			}
+			PAGE_API.receive(messagecontent);
+		}
+        
+        function appendUnreadMesageTip (messagecontent) {
+            var x = document.getElementById('unreadtipkey_57847cb4cfa94268b2d39f4e6e70ee6c');
+            if(x){
+               var a = x.offsetTop;
+                var h = document.body.scrollTop;
+                var h1 = document.body.scrollHeight;
+                var h3 = window.innerHeight;
+                  if (!(a >= h && a < (h + h3))) {
+                      CLIENT_API.showUpUnreadMessageTip();
+                  }
+				  unreadMsgTip = true;
+                return;
+            }
+            PAGE_API.receive(messagecontent);
+        }
+		
+		var CurrentPageMsgCount=0;
+		function setcurrentPageMessageCount(data)
+		{
+			CurrentPageMsgCount = data;
+		}
+		
+        window.addEventListener("mousewheel", function(event) {
+            if (event.wheelDelta) {
+                var h = document.body.scrollTop;
+                var scrollDis = event.wheelDelta;
+                var sh = document.body.scrollHeight;
+                var ih = window.innerHeight;
+
+                if (h == 0 && scrollDis > 0) {
+                    onScrollToLoadMoreHistory(h);
+                }
+            }
+        }, false);
+		window.addEventListener("resize", function (event) {
+			setwidth( );
+    }, false);
+        var event = document.createEvent("MouseEvent");
+        //
+        event.initMouseEvent("mousewheel", true, null, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+        window.dispatchEvent(event)
+    </script>
+
+
+</body>
+
+</html>

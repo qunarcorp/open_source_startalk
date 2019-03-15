@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EmotionManagerDialog</class>
+ <widget class="QDialog" name="EmotionManagerDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>520</width>
+    <height>450</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget
+{
+	font-family:&quot;微软雅黑&quot;;
+}
+QTabWidget
+{
+	border:none;
+}
+QListWidget
+{
+	border:none;
+}
+QWidget::gridwidget
+{
+	border:none;
+}
+QScrollArea
+{
+	border:none;
+}
+QWidget#page_local,#page_server{
+    border-radius: 10px;
+    background-color: #E2E2E2;
+	margin: 0px 10px 0px 10px
+}
+
+QPushButton{
+    color: #666666;
+	background-color: #FFFFFF;
+	border:none;
+}
+
+QPushButton:hover {
+    color: #FFFFFF;
+	background-color: #3dbbca;
+}
+QPushButton:pressed{
+
+    color: #FFFFFF;
+	background-color: #1194a4;
+}
+QPushButton:checked{
+
+    color: #FFFFFF;
+	background-color: #1ba9ba;
+}
+QListWidget::listWidget_LocalEmotion
+{
+	border:none;
+}
+QTabBar::tab
+{
+	width:65;
+	height:23;
+	font:14px ;
+	font-family:&quot;微软雅黑&quot;;
+}
+
+QTabBar::tab {
+  	background: #666666;
+	background-color: #FFFFFF;
+ 	padding: 2px;
+}
+
+QTabBar::tab:selected, QTabBar::tab:hover {
+    background: #FFFFFF;
+background-color: #3dbbca;
+}
+
+
+</string>
+  </property>
+  <widget class="QWidget" name="shadowbg" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>520</width>
+     <height>450</height>
+    </rect>
+   </property>
+   <widget class="QWidget" name="shadowinnerbg" native="true">
+    <property name="geometry">
+     <rect>
+      <x>8</x>
+      <y>8</y>
+      <width>504</width>
+      <height>434</height>
+     </rect>
+    </property>
+    <widget class="QWidget" name="bk" native="true">
+     <property name="geometry">
+      <rect>
+       <x>1</x>
+       <y>1</y>
+       <width>502</width>
+       <height>432</height>
+      </rect>
+     </property>
+     <widget class="TitlebarWidget" name="titlebar" native="true">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>502</width>
+        <height>28</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QWidget" name="widget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>28</y>
+        <width>502</width>
+        <height>405</height>
+       </rect>
+      </property>
+      <widget class="QTabWidget" name="tabWidget">
+       <property name="geometry">
+        <rect>
+         <x>13</x>
+         <y>10</y>
+         <width>140</width>
+         <height>385</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="tabPosition">
+        <enum>QTabWidget::South</enum>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="tab_local">
+        <attribute name="title">
+         <string>本地</string>
+        </attribute>
+        <widget class="QListWidget" name="listWidget_local">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>138</width>
+           <height>355</height>
+          </rect>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab_server">
+        <attribute name="title">
+         <string>服务器</string>
+        </attribute>
+        <widget class="QListWidget" name="listWidget_server">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>138</width>
+           <height>355</height>
+          </rect>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QStackedWidget" name="stackedWidget">
+       <property name="geometry">
+        <rect>
+         <x>159</x>
+         <y>0</y>
+         <width>340</width>
+         <height>401</height>
+        </rect>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="page_local">
+        <widget class="QWidget" name="widget_3" native="true">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>340</width>
+           <height>411</height>
+          </rect>
+         </property>
+         <widget class="QWidget" name="widget_4" native="true">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>360</y>
+            <width>320</width>
+            <height>40</height>
+           </rect>
+          </property>
+          <widget class="QPushButton" name="deleteSaveEmotionBtn">
+           <property name="geometry">
+            <rect>
+             <x>216</x>
+             <y>10</y>
+             <width>75</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Delete</string>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="addSaveEmotionBtn">
+           <property name="geometry">
+            <rect>
+             <x>18</x>
+             <y>10</y>
+             <width>75</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Add...</string>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="widget_6" native="true">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>2</y>
+            <width>320</width>
+            <height>360</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>320</width>
+            <height>360</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>320</width>
+            <height>360</height>
+           </size>
+          </property>
+          <widget class="QStackedWidget" name="stackedWidget_local">
+           <property name="geometry">
+            <rect>
+             <x>2</x>
+             <y>0</y>
+             <width>320</width>
+             <height>360</height>
+            </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>320</width>
+             <height>360</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>320</width>
+             <height>360</height>
+            </size>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="page_server">
+        <widget class="QWidget" name="widget_5" native="true">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>340</width>
+           <height>400</height>
+          </rect>
+         </property>
+         <widget class="QLabel" name="label_icon">
+          <property name="geometry">
+           <rect>
+            <x>130</x>
+            <y>70</y>
+            <width>91</width>
+            <height>91</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_name">
+          <property name="geometry">
+           <rect>
+            <x>80</x>
+            <y>200</y>
+            <width>41</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>名字:</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_showName">
+          <property name="geometry">
+           <rect>
+            <x>130</x>
+            <y>200</y>
+            <width>111</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_showmiaoshu">
+          <property name="geometry">
+           <rect>
+            <x>130</x>
+            <y>240</y>
+            <width>111</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_name_2">
+          <property name="geometry">
+           <rect>
+            <x>80</x>
+            <y>240</y>
+            <width>41</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>描述:</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_showSize">
+          <property name="geometry">
+           <rect>
+            <x>130</x>
+            <y>280</y>
+            <width>111</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_name_3">
+          <property name="geometry">
+           <rect>
+            <x>80</x>
+            <y>280</y>
+            <width>41</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>大小:</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="downloadBtn">
+          <property name="geometry">
+           <rect>
+            <x>120</x>
+            <y>320</y>
+            <width>75</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>PushButton</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="widget_2" native="true">
+       <property name="geometry">
+        <rect>
+         <x>153</x>
+         <y>0</y>
+         <width>10</width>
+         <height>401</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>TitlebarWidget</class>
+   <extends>QWidget</extends>
+   <header>TitlebarWidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

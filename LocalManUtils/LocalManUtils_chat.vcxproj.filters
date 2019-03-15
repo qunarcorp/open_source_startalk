@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="AsyncHandler.cpp" />
+    <ClCompile Include="breakpad\client_info.cc" />
+    <ClCompile Include="breakpad\exception_handler.cc" />
+    <ClCompile Include="breakpad\guid_string.cc" />
+    <ClCompile Include="breakpad\minidump_generator.cc" />
+    <ClCompile Include="breakpad\stdafx.cpp" />
+    <ClCompile Include="breakpad\string_utils.cc" />
+    <ClCompile Include="CrcHelper.cpp" />
+    <ClCompile Include="CryptoHelper.cpp" />
+    <ClCompile Include="DispathThread.cpp" />
+    <ClCompile Include="DumpHandle.cpp" />
+    <ClCompile Include="GeneratedFiles\Debug\moc_AsyncHandler.cpp" />
+    <ClCompile Include="GeneratedFiles\Debug\moc_IXmlSerializeable.cpp" />
+    <ClCompile Include="GeneratedFiles\Debug\moc_LogWriter.cpp" />
+    <ClCompile Include="GeneratedFiles\Debug\moc_SerializeableHelper.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_AsyncHandler.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_IXmlSerializeable.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_LogWriter.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_SerializeableHelper.cpp" />
+    <ClCompile Include="HttpResponse.cpp" />
+    <ClCompile Include="IXmlSerializeable.cpp" />
+    <ClCompile Include="Log.cpp" />
+    <ClCompile Include="LogProcess.cpp" />
+    <ClCompile Include="LogWriter.cpp" />
+    <ClCompile Include="mdump.cpp" />
+    <ClCompile Include="LambdaRunnnable.cpp" />
+    <ClCompile Include="SerializeableHelper.cpp" />
+    <ClCompile Include="SystemDefine.cpp" />
+    <ClCompile Include="UtilHelper.cpp" />
+    <ClCompile Include="GeneratedFiles\Debug\moc_DispathThread.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_DispathThread.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_LogProcess.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_LogProcess.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="breakpad\client_info.h" />
+    <ClInclude Include="breakpad\exception_handler.h" />
+    <ClInclude Include="breakpad\guid_string.h" />
+    <ClInclude Include="breakpad\inc\auto_critical_section.h" />
+    <ClInclude Include="breakpad\inc\breakpad_types.h" />
+    <ClInclude Include="breakpad\inc\minidump_cpu_amd64.h" />
+    <ClInclude Include="breakpad\inc\minidump_cpu_ppc.h" />
+    <ClInclude Include="breakpad\inc\minidump_cpu_ppc64.h" />
+    <ClInclude Include="breakpad\inc\minidump_cpu_sparc.h" />
+    <ClInclude Include="breakpad\inc\minidump_cpu_x86.h" />
+    <ClInclude Include="breakpad\inc\minidump_exception_linux.h" />
+    <ClInclude Include="breakpad\inc\minidump_exception_mac.h" />
+    <ClInclude Include="breakpad\inc\minidump_exception_solaris.h" />
+    <ClInclude Include="breakpad\inc\minidump_exception_win32.h" />
+    <ClInclude Include="breakpad\inc\minidump_format.h" />
+    <ClInclude Include="breakpad\inc\minidump_size.h" />
+    <ClInclude Include="breakpad\inc\scoped_ptr.h" />
+    <ClInclude Include="breakpad\minidump_generator.h" />
+    <ClInclude Include="breakpad\stdafx.h" />
+    <ClInclude Include="breakpad\string_utils-inl.h" />
+    <ClInclude Include="CoreObject.h" />
+    <ClInclude Include="CrcHelper.h" />
+    <ClInclude Include="CryptoHelper.h" />
+    <ClInclude Include="DumpHandle.h" />
+    <ClInclude Include="HttpResponse.h" />
+    <ClInclude Include="Log.h" />
+    <ClInclude Include="mdump.h" />
+    <ClInclude Include="SystemDefine.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="AsyncHandler.h" />
+    <CustomBuild Include="DispathThread.h" />
+    <CustomBuild Include="UtilHelper.h" />
+    <CustomBuild Include="IXmlSerializeable.h" />
+    <CustomBuild Include="LogWriter.h" />
+    <CustomBuild Include="LogProcess.h" />
+    <CustomBuild Include="LambdaRunnnable.h" />
+    <CustomBuild Include="SerializeableHelper.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{11433fac-b5ff-41a8-a333-cb78545323a1}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{4cb36170-e578-4b34-a8f6-313894919b10}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+  </ItemGroup>
+</Project>

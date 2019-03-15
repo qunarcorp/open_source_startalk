@@ -1,0 +1,147 @@
+@charset "UTF-8";
+
+.selectable {-webkit-user-select: text;}
+
+.time {   font-size: 12px;padding: 3px 10px;color:#999999;  }
+.timewrap {    text-align: center;    margin-top: 5px;    margin-bottom: 5px;}
+
+.linka, .linka:hover .linka:focus {text-decoration: none;outline:none;blr:expression(this.onFocus=this.blur());}
+
+.chat-message-left-table { }
+.chat-message-left-table .headimg{border:1px solid #CDCDCD;border-radius:5px;width: 36px;height: 36px;}
+.other .chat-message-left-table .headimg:hover{cursor:pointer}
+.chat-message-left-table .title{-webkit-user-select: text}
+.chat-message-left-table .title .tabicon{padding-left:3px;padding-right:3px;background-color: #666666;border-radius: 7px;color:#CDCDCD;}
+.chat-message-left-table .title .tabtime{color:#666666}
+
+.chat-message-left-table .title .tabtimehide{font-size: 0pt;}
+.chat-message-left-table .title .namehide{font-size:0pt;}
+.chat-message-left-table .title .hideline{height:0px;width:0;}
+
+
+.groupchat-message-center-notify { MARGIN-RIGHT: auto; MARGIN-LEFT: auto; TEXT-ALIGN: center; color: #999999; font-size: 12px;}
+
+
+
+
+.mapimage-panel {position: relative;height: 210px;width: 280px;}
+.mapimage-panel .image{cursor:pointer;}
+.mapimage-panel .textbk {vertical-align:middle;position: absolute; left: 0px; right: 0px; bottom: 0px; margin: 0; width: inherit;background-color: #000; opacity: 0.7;}
+.mapimage-panel .text {font-size:14px;color:#EFEFEF;height: 28px;display:block;text-overflow: ellipsis;white-space: normal;white-space: nowrap;overflow: hidden;line-height: 28px;padding-right: 10px;padding-left: 10px;}
+
+.voke{border:1px solid #FFFFFF;background-color:#fff;width:310px;height:68px;}
+.voke:hover{border:1px solid #00a3d2}
+
+.voke .voketitle{display: block;max-width:200px;overflow: hidden;white-space: nowrap;color:#333;font-weight:bold;font-size:16px;padding:0px 6px;text-overflow: ellipsis; align:left; }
+.voke .vokedesc{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;color:#666;font-size:12px;max-width:200;word-wrap:break-word;word-break:break-all;}
+.voke .vokedescpro{color:#666;font-size:12px;max-width:200;word-wrap:break-word;word-break:break-all;}
+.voke .vokeimg{width:50px;height:50px; padding-left:20px; padding-top:8px; padding-right:20px;padding-bottom:8px;}
+.voke .vokeimgpro {width:50px;height:50px; padding-left:20px; padding-top:10px; padding-right:20px;padding-bottom:8px;vertical-align:top;}
+
+
+.productcard {border: 1px solid #CCCCCC;border-radius: 5px;background-color: #FFFFFF;padding: 5px;margin:5px 60px;-webkit-user-select: none;}
+.productcard .top {position: relative;}
+.productcard .titleimg {width: 25px;height: 25px;float: left;}
+.productcard .titletxt {height: 25px;margin-left: 30px;line-height: 25px;color: #47C1D0;font-size: 15px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;clear:right;}
+.productcard .spiderline {height:1px;background-color:#CCCCCC;margin:5px 0px;}
+.productcard .descimgtxt {min-height: 85px;position: relative;clear: both;}
+.productcard .desctxtonly {position: relative; clear: both;}
+.productcard .descimgtxt .productimg {width: 85px;height:85px;float: left;}
+.productcard .descimgtxt .prodectdescs {margin-left: 100px;}
+.productcard .prodectdescs .itempanel {position: relative;}
+.productcard .prodectdescs .itempanel .key {line-height: 20px;width: 70px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;display: block;font-size: 14px;float: left;color: #666666;}
+.productcard .prodectdescs .itempanel .value {margin-left: 75px;line-height: 20px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;display: block;clear: right;font-size: 14px;color: #666666;}
+
+
+table {border-collapse:collapse;border-spacing:0;}
+
+.voicemessage {}
+.voicemessage:hover{cursor:pointer;}
+.voicemessage .readtip {height:5px;width:5px;border-radius:3px;background-color:#FF0000;}
+.other .voicemessage .readtip {margin-left: 10px;}
+.self .voicemessage .readtip {margin-right: 10px;}
+.voicemessage  .img{height: 21px;width:21px;}
+.voicemessagewrap {border-collapse:collapse;border-spacing:0;line-height:0;}
+.voicemessage .tiemlength {font-size: 14px;line-height: 21px;}
+
+.self {position:relative;display:-webkit-box;box-pack:end;-webkit-box-pack:end;}
+.other {position:relative;display:-webkit-box;box-pack:start;-webkit-box-pack:start;}
+.messagebubblewrapperframe {max-width: 90%;position:relative;padding-bottom: 5px;display:box;display:-webkit-box;}
+.self .messagebubblewrapperframe{box-pack:end;-webkit-box-pack:end;padding-left: 10px;}
+.other .messagebubblewrapperframe{box-pack:start;-webkit-box-pack:start;padding-right: 10px;}
+.bubberwrapper{position:relative;display:box;display:-webkit-box;}
+.bubberwrapperImage{position:relative;display:box;display:-webkit-box;margin-top:10px; margin-bottom:10px;margin-left:15px;}
+.self .bubberwrapper {box-pack:end;-webkit-box-pack:end;}
+.other .bubberwrapper {box-pack:start;-webkit-box-pack:start;}
+
+.bubberwrapper .voiceplayicon {position:absolute;width:5px;height:5px;background:red;border-radius:3px;top:50%;margin-top:-3px;}
+.self .bubberwrapper .voiceplayicon {margin-right:10px;display: none;}
+.other .bubberwrapper .voiceplayicon {margin-left:10px;}
+
+.bubberwrapper .bubble9{float:none;border-style:solid;}
+.self .bubble9{margin-left:20px;}
+
+
+.unreadtip {width:100%;}
+.unreadtip .spiderline {width:50%;}
+.unreadtip .spiderline .left {height:1px;background:-webkit-gradient(linear, 0% 0%, 100% 0%, from(#FFF), to(#999999));;margin-left:50px;}
+.unreadtip .spiderline .right {height:1px;background:-webkit-gradient(linear, 100% 0%, 0% 0%, from(#FFF), to(#999999));;margin-right:50px;}
+.unreadtip .center {min-width:100px; text-align:center;color: #999999;font-size: 12px;}
+
+.sendloadingwrap {position:absolute;width:16px;height:16px;top:50%;margin-top:-8px;}
+.sendloadingwrap .img {height:16px;width:16px;}
+.sendloadingwrap .img:hover {cursor:pointer;}
+
+.messageshareableselector {margin:10px 10px 0px 10px;border:1px solid #FF0000;border-radius: 3px;}
+.messageshareableselector:hover {border:1px solid #1ba9ba;}
+.messageshareablewrapper .messageshareableselector {float: left;}
+
+.unlimitlink {background:#FFFFFF;padding:9px 5px 9px 21px;border-radius:5px;max-width: 350px;min-width: 256px;min-height: 50px;}
+.unlimitlink .titleimg {float:left;margin-right:19px;margin-bottom:5px;width:50px;}
+.unlimitlink .titletext {display: block;max-width:270px;overflow: hidden;white-space: nowrap;color:#333;font-weight:bold;font-size:16px;text-overflow: ellipsis; align:left;}
+.unlimitlink .desctext {color:#666;font-size:12px;}
+
+a#unlimitlink:hover {cursor:pointer;}
+
+
+.atinfonomal {border:none; background: #FFFF00;color:#000000;}
+.atinfonotice {border: none; background: #FFFF00;color:#FF0000;}
+
+.qchatnoticewarp {background-color:#FFFFFF; border: 1px solid #d1d1d1; border-radius:5px;padding:5px 0px;margin:1px}
+.qchatnoticeheader{display:-webkit-box;box-pack:start;-webkit-box-pack:start;padding-left:10px;;min-width: 360px;}
+.qchatnoticeheader:hover{cursor:pointer;}
+.qchatnoticeheader .first{font-size:14px;color:#333333;font-weight:bold;}
+.qchatnoticeheader .secend{margin-left:20px;font-size:14px;color:#333333;}
+.qchatnoticeboot{display:-webkit-box;padding:0px 10px;min-height: 1.4em;font-size:12px;font-weight:bold;}
+.qchatnoticeboot:hover{cursor:pointer;}
+.qchatnoticeboot .left{-webkit-box-flex:1;overflow:hidden;text-overflow:ellipsis;white-space: nowrap;font-size:12px;}
+.qchatnoticeboot .right{overflow:hidden;text-overflow:ellipsis;text-align:right;width:8em;height:1.4em;white-space: nowrap;font-size:12px;}
+.qchatnoticeitem{display:-webkit-box;padding:0px 10px;}
+.qchatnoticeitem .key {width:6em;height:1.4em;text-align:justify;font-size:12px;color:#000000;overflow:hidden;}
+.qchatnoticeitem .value {-webkit-user-select: text;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;color:#666;font-size:12px;;word-wrap:break-word;word-break:break-all;-webkit-box-flex:1;box-flex:1;margin-left:5px;font-size:12px;color:#999999;}
+.qchatnoticespline {height:1px;border:none;border-top:1px solid #d1d1d1;margin-top:5px;margin-bottom:5px;}
+
+
+/* 酒店气泡样式，结算员 begin */
+/*   常见问题 */
+.hotel_questions_wrap {max-width: 300px;margin-top: 10px;background:#FFFFFF;}
+.hotel_questions_wrap .title{border: 1px solid #E8E8E8;padding:2px 10px;background:#F6F7F8}
+.hotel_questions_wrap .questions{border: 1px solid #E8E8E8;margin-top: 5px;padding: 5px 10px;background:#F6F7F8}
+.hotel_questions_wrap .questions .subtitle{color:#FFA000;}
+.hotel_questions_wrap .questions .split {height: 1px;background: #E8E8E8;margin:0px 0px 3px 0px;}
+.hotel_questions_wrap .questions .question {cursor:pointer;color:#55AAFF;}
+
+
+/*   结算单 */
+.hotel_order_wrap {max-width: 200px;margin-top: 10px;background:#FFFFFF;}
+.hotel_order_wrap .title {border: 1px solid #E8E8E8;padding:2px 10px;background:#F6F7F8}
+.hotel_order_wrap .orders {border: 1px solid #E8E8E8;margin-top: 5px;background:#F6F7F8}
+.hotel_order_wrap .order {padding:5px 10px;cursor:pointer;}
+.hotel_order_wrap .order .subtitle{color: #ACACAC;}
+.hotel_order_wrap .order .boot{display: block;}
+.hotel_order_wrap .order .boot .left{color: #666666;}
+.hotel_order_wrap .order .boot .right{position:relative;float: right;color: #FFA000;}
+.hotel_order_wrap .split {height: 1px;background: #E8E8E8;}
+.hotel_order_wrap .more {cursor: pointer;text-align: center;padding: 4px 0px;color:#55AAFF}
+/* 酒店气泡样式，结算员 end */
+

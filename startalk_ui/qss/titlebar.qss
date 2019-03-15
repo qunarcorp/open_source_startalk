@@ -1,0 +1,65 @@
+
+/****************标题栏 start******************/
+
+QWidget#Title_bar {
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	background-color: #00000000;
+}
+
+/* 	background: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0,
+                                 stop: 0 #1BA9BA, stop: 0.7 #1BA9BA,
+                                 stop: 0.7 #1BA9BA, stop: 1.0 #5AC1CD); */
+                                 
+QToolButton#Titlebar_Max {
+	background-color: rgba(255, 255, 255, 0);
+}
+QToolButton#Titlebar_Min
+{
+	height:27px;
+	width:30px;
+	background:#00000000;
+	border-image: url(:/Images/min_normal.png);  
+}
+
+QToolButton#Titlebar_Min:hover
+{
+	background:#02BB00;
+	border-image: url(:/Images/min_hover.png);  
+}
+
+QToolButton#Titlebar_Min:pressed
+{
+	background:#03A601;
+	border-image: url(:/Images/min_hover.png);  
+}
+
+
+
+
+QToolButton#Titlebar_Close
+{
+	height:27px;
+	width:30px;
+	background:#00000000;
+	border-image: url(:/Images/close_normal.png);  
+}
+
+QToolButton#Titlebar_Close:hover
+{
+	background:#F25561;
+	border-image: url(:/Images/close_hover.png);  
+}
+
+QToolButton#Titlebar_Close:pressed
+{
+	background:#E74450;
+	border-image: url(:/Images/close_hover.png);  
+}
+
+
+
+
+
+
+/****************标题栏 end********************/

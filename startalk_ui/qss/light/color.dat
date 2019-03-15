@@ -1,0 +1,21 @@
+{
+    "transparent"               :   "#00000000" ,
+    "recent_item_bk_hover"      :   "#D8DCDF"   ,
+    "recent_item_bk_checked"    :   "#BBC1C9"   ,
+    "recent_item_title_normal"  :   "#000000"   ,
+    "recent_item_title_checked" :   "#000000"   ,
+    "recent_item_desc_normal"   :   "#8F8F8F"   ,
+    "recent_item_desc_checked"  :   "#000000"   ,
+    "main_theme_text_active"    :   "#1BA9BA"   ,
+    "main_theme_text_normal"    :   "#515151"   ,
+    "qchat_notice_promo_normal"  :   "#ff0000"	,
+	"qchat_notice_promo_checked"  :   "#a1a1a1"	,
+	"qchat_notice_option_normal"  :   "#000088"	,
+	"qchat_notice_option_checked"  :   "#76EE00",
+    "pinned_list_item_bk_normal"      :   "#EAEAEA"   ,
+    "pinned_list_item_bk_hover"      :   "#D8DCDF"   ,
+    "pinned_list_item_bk_checked"      :   "#BBC1C9"  ,
+    "pinned_list_group_bk_checked"      :   "#E0E0E0"  ,
+    "pinned_list_text_checked"      :   "#999999"  
+    
+}

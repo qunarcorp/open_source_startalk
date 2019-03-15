@@ -1,0 +1,194 @@
+
+
+#ChatDialog QWidget{
+    font-family:"微软雅黑";
+}
+
+#ChatDialog QLineEdit{
+    background-color: #00000000;
+    border:none;
+	color:#666666;
+	font-size:12px;
+}
+#ChatDialog QLabel#name
+{
+	font: 75 16pt "微软雅黑";
+}
+
+#ChatDialog QWidget#widgetBorder{
+    border: none;
+    border-radius: 0px;
+    
+}
+
+#ChatDialog QWidget#webView
+{
+    background:#00000000;
+}
+#ChatDialog QWidget#webviewFrame
+{
+    background:#FFFFFF;
+    border:#FF0000;
+}
+#ChatDialog QWidget#toolbar_1{
+    border: none;
+    background:#FFFFFF;
+    
+}
+#ChatDialog QWidget#spider_0{
+	
+    background-color: #E0E0E0;
+}
+#ChatDialog QWidget#border{
+    background-color: #FFFFFF;
+}
+#ChatDialog QWidget#border_3{
+    background-color: #FFFFFF;
+}
+#ChatDialog QWidget#fontpage{
+    background-color: #FFFFFF;
+}
+#ChatDialog QWidget#barpanel{
+	border:none;
+    background: #FFFFFF;
+}
+#ChatDialog QWidget#frametextedit,#ChatDialog QWidget#menupanel{
+    background-color: #FFFFFF;
+}
+#ChatDialog QTextEdit#textEdit{
+    border:none;
+	background-color: #00000000;
+}
+
+/* 工具条 */
+#ChatDialog QPushButton#trace{  
+    border: none;
+    image : url(:/Images/icon/jiagou.png);
+}
+#ChatDialog QPushButton#trace:hover,
+#ChatDialog QPushButton#trace:pressed{  
+    image : url(:/Images/icon/jiagou_hover.png);
+}
+
+
+#ChatDialog QPushButton#pushButton_muc{  
+    border: none;
+    image : url(:/Images/icon/newgroup.png);
+}
+#ChatDialog QPushButton#pushButton_muc:pressed,
+#ChatDialog QPushButton#pushButton_muc:hover{
+    image : url(:/Images/icon/newgroup_hover.png);
+}
+
+
+#ChatDialog QPushButton#sendmail{  
+    border:none;
+    margin-right:6px;
+    image : url(:/Images/icon/mail.png);
+}
+#ChatDialog QPushButton#sendmail:hover,
+#ChatDialog QPushButton#sendmail:checked,
+#ChatDialog QPushButton#sendmail:pressed{
+    image : url(:/Images/icon/mail_hover.png);
+}
+
+#ChatDialog QPushButton#sendbtn{
+    border-radius: 0px;
+    color:#666666;
+    border:1px solid #E5E5E5;
+    background-color:#FFFFFF;
+}
+
+#ChatDialog QPushButton#sendbtn:hover{
+    color:#FFFFFF;
+    background-color:#38C738;
+}
+#ChatDialog QPushButton#sendbtn:pressed{
+    color:#FFFFFF;
+    background-color:#2FB82F;
+}
+
+
+
+#ChatDialog QPushButton#productbtn{
+    border-radius: 0px;
+    color:#666666;
+    border:1px solid #E5E5E5;
+    background-color:#FFFFFF;
+}
+
+#ChatDialog QPushButton#productbtn:hover{
+    color:#FFFFFF;
+    background-color:#38C738;
+}
+#ChatDialog QPushButton#productbtn:pressed{
+    color:#FFFFFF;
+    background-color:#2FB82F;
+}
+
+#ChatDialog QWidget#Titleswidget{
+    background-color:#D7D7D7;   
+}
+
+
+#ChatDialog QPushButton#showProduct{border:none;image:url(:/Images/webgo.png);}
+#ChatDialog QPushButton#showProduct:hover{image:url(:/Images/webgo.png);}
+#ChatDialog QPushButton#showProduct:pressed{image:url(:/Images/webgo.png);}
+
+#ChatDialog QWidget#widget{border: none; border-left:1px solid #CCCCCC;border-top:1px solid #CCCCCC;}
+
+/*#ChatDialog QLabel#platformIcon {border:none; border-radius:6px;background:#47C1D0;color:#FFFFFF;margin-top:7px; margin-bottom:2px;padding:0px 4px;}*/
+
+#ChatDialog QLabel#status
+{
+	border:none;
+	font-size:11px;
+}
+
+#ChatDialog QLabel#typing
+{
+	border:none;
+	font-size:11px;
+}
+
+#ChatDialog QWidget#robotMenu
+{
+    background:#E5E5E5;
+    border:none;
+}
+
+
+#ChatDialog QPushButton#up
+{ 
+    border:none;
+   image : url(:/Images/robotInput.png);
+}
+
+#ChatDialog QPushButton#down
+{
+     border:none;
+   image : url(:/Images/robotMenu.png);
+}
+#ChatDialog QPushButton#btnfilter{ 
+    border:1px solid #00000000;
+	image : url(:/Images/filter.png);
+} 
+#ChatDialog QPushButton#btnfilter:hover{ 
+    image : url(:/Images/filter.png);
+} 
+#ChatDialog QPushButton#btnfilter:pressed{ 
+   image : url(:/Images/filter.png);
+} 
+
+#ChatDialog QWidget#dealingpanel
+{
+	background:#00000000;
+	border:none;
+}
+#ChatDialog QLabel#dealing
+{
+	background:#A0000000;
+	border:none;
+	color:#ECEDEF;
+	border-radius:3px;
+}

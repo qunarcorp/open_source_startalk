@@ -1,0 +1,4 @@
+QWidget:focus{
+    border:none;
+    outline:none;
+}

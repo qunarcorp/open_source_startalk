@@ -1,0 +1,19 @@
+{
+    "transparent"               :   "#00000000" ,
+    "recent_item_bk_hover"      :   "#4A4A4A"   ,
+    "recent_item_bk_checked"    :   "#515050"   ,
+    "recent_item_title_normal"  :   "#CFCFCF"   ,
+    "recent_item_title_checked" :   "#CFCFCF"   ,
+    "recent_item_desc_normal"   :   "#A3A3A3"   ,
+    "recent_item_desc_checked"  :   "#F8F8FF"	,
+	"qchat_notice_promo_normal"  :   "#ff0000"	,
+	"qchat_notice_promo_checked"  :   "#a1a1a1"	,
+	"qchat_notice_option_normal"  :   "#000088"	,
+	"qchat_notice_option_checked"  :   "#76EE00",
+    
+    "pinned_list_item_bk_normal"      :   "#3A3A3A"   ,
+    "pinned_list_item_bk_hover"      :   "#4A4A4A"   ,
+    "pinned_list_item_bk_checked"      :   "#515050"  ,
+    "pinned_list_group_bk_checked"      :   "#303030"  ,
+    "pinned_list_text_checked"      :   "#CFCFCF"  
+}

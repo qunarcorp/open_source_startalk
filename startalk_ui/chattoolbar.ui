@@ -1,0 +1,803 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ChatToolBar</class>
+ <widget class="QWidget" name="ChatToolBar">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>856</width>
+    <height>32</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>500</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>ChatToolBar</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#ChatToolBar{
+	font-family:微软雅黑;
+	font-size:12px;
+}
+
+QPushButton#btnFont{ 
+    border:1px solid #00000000;
+	image : url(:/Images/font_normal.png);
+} 
+QPushButton#btnFont:hover{ 
+    image : url(:/Images/font_hover.png);
+} 
+QPushButton#btnFont:pressed{ 
+    image : url(:/Images/font_hover.png);
+}
+QPushButton#btnEmotion{ 
+    border:1px solid #00000000;
+	image : url(:/Images/toolbar_emoticon_normal.png);
+} 
+QPushButton#btnEmotion:hover{ 
+	image : url(:/Images/toolbar_emoticon_hover.png);
+} 
+QPushButton#btnEmotion:pressed{ 
+	image : url(:/Images/toolbar_emoticon_hover.png);
+} 
+
+
+
+QPushButton#btnJietu{ 
+    border:1px solid #00000000;
+	image : url(:/Images/toolbar_screenCapture_normal.png);
+} 
+QPushButton#btnJietu:hover{ 
+    image : url(:/Images/toolbar_screenCapture_hover.png);
+} 
+QPushButton#btnJietu:pressed{ 
+   image : url(:/Images/toolbar_screenCapture_hover.png);
+} 
+
+
+
+QPushButton#btnSendPic{ 
+    border:1px solid #00000000;
+	image : url(:/Images/toolbar_sendfile_normal.png);
+} 
+QPushButton#btnSendPic:hover{ 
+    image : url(:/Images/toolbar_sendfile_hover.png);
+} 
+QPushButton#btnSendPic:pressed{ 
+    image : url(:/Images/toolbar_sendfile_hover.png);
+} 
+
+
+
+QPushButton#historyRecord{ 
+    border:1px solid #00000000;
+	
+	image : url(:/Images/historyicon.png);
+} 
+QPushButton#historyRecord:hover{ 
+    image : url(:/Images/historyicon.png);
+} 
+QPushButton#historyRecord:pressed{ 
+    image : url(:/Images/historyicon.png);
+} 
+
+QPushButton#historyRecordWeb{ 
+    border:1px solid #00000000;
+	
+	image : url(:/Images/aio_group_search_normal.png);
+} 
+QPushButton#historyRecordWeb:hover{ 
+    image : url(:/Images/aio_group_search_normal.png);
+} 
+QPushButton#historyRecordWeb:pressed{ 
+    image : url(:/Images/aio_group_search_normal.png);
+} 
+
+
+QPushButton#btnQuickReply{ 
+    border:1px solid #00000000;
+	image : url(:/Images/icon/quickreply_normal.png);
+} 
+QPushButton#btnQuickReply:hover,
+QPushButton#btnQuickReply:pressed{ 
+    image : url(:/Images/icon/quickreply_hover.png);
+} 
+
+
+
+QPushButton#btnTransfer{ 
+    border:1px solid #00000000;
+	image : url(:/Images/icon/transfor_normal.png);
+} 
+QPushButton#btnTransfer:hover,
+QPushButton#btnTransfer:pressed { 
+   image : url(:/Images/icon/transfor_hover.png);
+} 
+
+
+QPushButton#btnShake{ 
+    border:1px solid #00000000;
+	image : url(:/Images/toolbar_shake_normal.png);
+} 
+QPushButton#btnShake:hover{ 
+    image : url(:/Images/toolbar_shake_hover.png);
+} 
+QPushButton#btnShake:pressed{ 
+   image : url(:/Images/toolbar_shake_hover.png);
+}
+
+QPushButton#btnJietusetting{ 
+    border:1px solid #00000000;
+	image : url(:/Images/jietu_normal.png);
+} 
+QPushButton#btnJietusetting:hover{ 
+    image : url(:/Images/jietu_hover.png);
+} 
+QPushButton#btnJietusetting:pressed{ 
+   image : url(:/Images/jietu_hover.png);
+} 
+
+
+QPushButton#btnShare{ 
+    border:1px solid #00000000;
+	image : url(:/Images/icon/share_normal.png);
+} 
+QPushButton#btnShare:hover,
+QPushButton#btnShare:pressed{ 
+    image : url(:/Images/icon/share_hover.png);
+} 
+
+
+QPushButton#btnRCode{ 
+    border:1px solid #00000000;
+	image : url(:/Images/rcode_normal.png);
+} 
+QPushButton#btnRCode:hover{ 
+    image : url(:/Images/rcode_hover.png);
+} 
+QPushButton#btnRCode:pressed{ 
+   image : url(:/Images/rcode_hover.png);
+} 
+
+QPushButton#btnRobot{ 
+    border:1px solid #00000000;
+	image : url(:/Images/toolbar_robot_normal.png);
+} 
+QPushButton#btnRobot:hover{ 
+    image : url(:/Images/toolbar_robot_hover.png);
+} 
+QPushButton#btnRobot:pressed{ 
+   image : url(:/Images/toolbar_robot_hover.png);
+}
+
+QPushButton#btnCloseSession{ 
+    border:1px solid #00000000;
+	image : url(:/Images/icon/toolbar/closesession.png);
+} 
+QPushButton#btnPingFen{ 
+    border:1px solid #00000000;
+	image : url(:/Images/icon/toolbar/pingfen.png);
+} 
+
+
+QPushButton#btnToolbarMore{ 
+   color:#666666;
+} 
+QPushButton#btnToolbarMore:hover{ 
+    color : #1ba9ba;
+} 
+QPushButton#btnToolbarMore:pressed{ 
+   color : #1ba9ba;
+}
+QToolButton::menu-indicator {
+     image: None;
+}
+
+QComboBox {
+    border: 1px solid #EBEBEB;
+    border-radius: 0px;
+    padding: 1px 18px 1px 3px;
+}
+
+QComboBox:!editable, QComboBox::drop-down:editable {
+     background: #AAFFFFFF;
+}
+
+QComboBox:on { /* shift the text when the popup opens */
+    padding-top: 3px;
+    padding-left: 4px;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+	border-left-width: 1px;
+    border-left-color: #EBEBEB;
+    border-left-style: solid; /* just a single line */
+}
+
+QComboBox::down-arrow {
+    image: url(:/Images/jietu_normal.png);
+}
+
+QComboBox::down-arrow:on { /* shift the arrow when popup is open */
+    top: 1px;
+    left: 1px;
+}
+QWidget#btnToolbarMore,QWidget#chatencrypt,QWidget#code_checkBox,QWidget#codeStyle_comboBox,QWidget#codetype_comboBox{
+    font-size:12px;
+}
+  </string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QPushButton" name="btnFont">
+     <property name="minimumSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>设置字体及样式</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btnEmotion">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>表情</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btnJietu">
+     <property name="minimumSize">
+      <size>
+       <width>20</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>20</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>截图</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btnJietusetting">
+     <property name="minimumSize">
+      <size>
+       <width>10</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>10</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btnSendPic">
+     <property name="minimumSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>发送图片及文件</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btnSendVoice">
+     <property name="maximumSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btnQuickReply">
+     <property name="minimumSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>快速回复</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btnTransfer">
+     <property name="minimumSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>会话转移</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btnShake">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btnRCode">
+     <property name="minimumSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>扫二维码</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="autoExclusive">
+      <bool>false</bool>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btnShare">
+     <property name="minimumSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>分享消息</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="autoExclusive">
+      <bool>false</bool>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btnRobot">
+     <property name="minimumSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>打开机器人</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btnCloseSession">
+     <property name="minimumSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>结束会话</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btnPingFen">
+     <property name="minimumSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>评分</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btnToolbarMore">
+     <property name="minimumSize">
+      <size>
+       <width>50</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>50</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>更多</string>
+     </property>
+     <property name="autoExclusive">
+      <bool>true</bool>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="vidioandaudio">
+     <property name="minimumSize">
+      <size>
+       <width>40</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>40</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>实时音视频</string>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="localman.qrc">
+       <normaloff>:/Images/icon/vidioaud.png</normaloff>:/Images/icon/vidioaud.png</iconset>
+     </property>
+     <property name="checkable">
+      <bool>false</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+     <property name="popupMode">
+      <enum>QToolButton::MenuButtonPopup</enum>
+     </property>
+     <property name="toolButtonStyle">
+      <enum>Qt::ToolButtonIconOnly</enum>
+     </property>
+     <property name="autoRaise">
+      <bool>true</bool>
+     </property>
+     <property name="arrowType">
+      <enum>Qt::NoArrow</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>162</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QPushButton" name="historyRecord">
+     <property name="minimumSize">
+      <size>
+       <width>2</width>
+       <height>2</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>2</width>
+       <height>2</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>本机消息搜索</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="code_checkBox">
+     <property name="minimumSize">
+      <size>
+       <width>60</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>60</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>Code</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="codeStyle_comboBox">
+     <property name="minimumSize">
+      <size>
+       <width>80</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>80</width>
+       <height>16777215</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="codetype_comboBox">
+     <property name="minimumSize">
+      <size>
+       <width>80</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>80</width>
+       <height>16777215</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="historyRecordWeb">
+     <property name="minimumSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>远程消息搜索</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="localman.qrc"/>
+ </resources>
+ <connections/>
+</ui>

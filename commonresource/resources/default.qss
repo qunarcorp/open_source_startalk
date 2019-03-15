@@ -1,0 +1,493 @@
+
+/* 全局配置 */
+QWidget#dialogborderback{
+    border:1px solid #000000;
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                 stop: 0 #edeeef, stop: 1.0 #d4d7da);
+}
+QWidget#dialogbg{
+    border:#none;
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                 stop: 0 #edeeef, stop: 1.0 #d4d7da);
+}
+
+QWidget#translatebg{
+    border:1px solid #00000000;
+    background-color:#00000000;
+}
+
+QWidget#shadowbg
+{
+    border-width: 10px;
+	border-image: url(:/Images/bordershadow.png);
+	background:#00000000;
+}
+QWidget#shadowinnerbg
+{
+    border:1px solid #D1D1D1;
+	background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                 stop: 0 #edeeef, stop: 1.0 #d4d7da);
+}
+
+
+QWidget
+{
+	font-family:"微软雅黑";
+}
+
+                                 
+QRadioButton::indicator:checked {
+	image: url(:/Images/radio-select.png);
+}
+QRadioButton::indicator:checked:hover {
+	image: url(:/Images/radio-select-hover.png);
+}
+QRadioButton::indicator:unchecked {
+	image: url(:/Images/radio-unselect.png);
+}
+QRadioButton::indicator:unchecked:hover {
+	image: url(:/Images/radio-unselect-hover.png);
+}
+
+QCheckBox::indicator:unchecked {
+	image: url(:/Images/checkbox_normal.png);
+}
+
+
+QCheckBox::indicator:hover {
+	image: url(:/Images/checkbox_hover.png);
+}
+
+QCheckBox::indicator:checked {
+	image: url(:/Images/checkbox_select.png);
+}
+
+
+QWidget#border{
+	border: 1px solid #d7d8d9;
+	border-left-width: 0;
+	border-bottom-right-radius: 4px;
+	background-color: rgb(246, 246, 246);
+}
+
+QWidget#border_2{
+	border: 1px solid #d7d8d9;
+	border-left-width: 0;
+	border-bottom-right-radius: 4px;
+	background-color: rgb(246, 246, 246);
+}
+
+
+
+QDialog{
+	border-radius: 4px;
+	background-color: rgb(255, 255, 255, 254);
+	background-position: top left right bottom;
+	background-clip: padding;
+	border: 1px solid #d7d8d9;
+}
+
+QWidget#widgetBorder {
+	background-color: #1BA9BA;
+	border-radius: 4px;
+	border: 1px solid #022d38;
+}
+
+QToolButton {
+	color: #B1B1B1;
+}
+
+QWidget:MainWidget{
+	background-color: rgb(27, 169, 186);
+}
+
+
+
+QLabel#TitleBar_title{
+	font: bold 12px;
+	color: #999999;
+}
+
+QWidget#loginHorizontalWidget1{   
+	background-color: rgba(255, 0, 0,0);
+}
+QWidget#verticalWidget{   
+	background-color: rgba(255, 0, 0,0);
+}
+QWidget#loginVerticalWidget1{
+	background-color: rgba(255, 0, 0,0);
+}
+
+QLabel#loginLogo{	
+	background-color: rgba(255, 0, 0,0);
+}
+
+
+ 
+#LoginWidget QHyperLink{
+    color: rgb(255, 255, 255);	
+	font: bold 14px;	
+	text-decoration: none;
+}
+
+#LoginWidget QHyperLink:hover{
+	color: rgb(17, 103, 102);
+	font: bold 14px;	
+}
+
+QLabel#sep{
+	color: rgb(255, 255, 255);	
+	font: bold 15px;		
+}
+QPushButton#closeBtn{
+	border-image: url(:/Images/close.png);  
+}
+QPushButton#closeBtn:hover{
+	border-image: url(:/Images/close-hover.png);  
+}
+QPushButton#closeBtn:pressed{
+	border-image: url(:/Images/close-down.png);  
+}
+QPushButton#minBtn{
+	border-image: url(:/Images/min.png);  
+}
+QPushButton#minBtn:hover{
+	border-image: url(:/Images/min-hover.png);  
+}
+QPushButton#minBtn:pressed{
+	border-image: url(:/Images/min-down.png);  
+}
+QPushButton#loginpic{
+   border: none;
+ }
+/****************全局风格 start******************/
+
+
+
+
+
+
+ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+     background: none;
+ }
+ 
+QScrollBar::add-line:vertical
+{
+	height: 0px;	
+    subcontrol-position: bottom;  
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical
+{
+	height: 0px;	
+    subcontrol-position: top;  
+    subcontrol-origin: margin;  
+}
+
+QScrollBar::handle:vertical
+{	
+	border:1px #ACACAC;
+    border-radius: 3px;
+	margin: 4px 3px 4px 3px;   
+    background-color: #ACACAC;
+    min-height : 20px;
+}
+
+QScrollBar:vertical
+{
+	width:  12px;
+	margin: 0px 0px 0px 0px;   
+	background-color: #00000000;
+}
+
+QScrollBar::add-line:horizontal
+{
+	height: 0px;	
+    subcontrol-position: right;  
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:horizontal
+{
+	height: 0px;	
+    subcontrol-position: left;  
+    subcontrol-origin: margin;  
+}
+
+QScrollBar::handle:horizontal
+{	
+	border:1px #ACACAC;
+    border-radius: 3px;
+	margin: 3px 4px 3px 4px;   
+    background-color: #ACACAC;
+    min-height : 20px;
+}
+
+QScrollBar:horizontal
+{
+	height:  12px;
+	margin: 0px 0px 0px 0px;   
+	background-color: #00000000;
+}
+
+ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+     background: none;
+ }
+/****************全局风格 end******************/
+
+/****************主控制窗口 start******************/
+
+QLineEdit#lineEdit {
+	font-size: 15px;
+	border-radius: 16px;
+	background-color: rgb(255, 255, 255);
+    padding-left:10px;
+}
+
+
+
+/****************主控制窗口 end******************/
+
+
+
+/**************** 主界面**********************/
+
+
+#MainDialog QPushButton#btnTheme{ 
+   color:#666666;
+} 
+#MainDialog QPushButton#btnTheme:hover{ 
+    color : #1ba9ba;
+} 
+#MainDialog QPushButton#btnTheme:pressed{ 
+   color : #1ba9ba;
+}
+
+
+QPushButton#framebtn{
+    border:1px solid #00000000;
+    image:url(:/Images/icon_go.png);
+}
+QPushButton#framebtn:pressed{
+    border:1px solid #00000000;
+    image:url(:/Images/icon_go_hover.png);
+}
+QPushButton#framebtn:checked{
+    border:1px solid #00000000;
+    image:url(:/Images/icon_go_hover.png);
+}
+
+
+QPushButton#groupbtn{
+    border:1px solid #00000000;
+    image:url(:/Images/mainpanel_group_normal.png);
+}
+QPushButton#groupbtn:pressed{
+    border:1px solid #00000000;
+    image:url(:/Images/mainpanel_group_down.png);
+}
+QPushButton#groupbtn:checked{
+    border:1px solid #00000000;
+    image:url(:/Images/mainpanel_group_down.png);
+}
+
+
+QPushButton#chatsbtn{
+    border:1px solid #00000000;
+    image:url(:/Images/mainpanel_chats_normal.png);
+}
+QPushButton#chatsbtn:pressed{
+    border:1px solid #00000000;
+    image:url(:/Images/mainpanel_chats_pressed.png);
+}
+QPushButton#chatsbtn:checked{
+    border:1px solid #00000000;
+    image:url(:/Images/mainpanel_chats_pressed.png);
+}
+QPushButton#combinationbtn{
+    border:1px solid #00000000;
+    image:url(:/Images/mainpanel_group_normal.png);
+}
+QPushButton#combinationbtn:pressed{
+    border:1px solid #00000000;
+    image:url(:/Images/mainpanel_group_down.png);
+}
+QPushButton#combinationbtn:checked{
+    border:1px solid #00000000;
+    image:url(:/Images/mainpanel_group_down.png);
+}
+
+
+
+/****************聊天窗口 end******************/
+
+/****************通知窗口 start******************/
+#NotifyWindow QTextBrowser{
+	font-size: 12px;
+	border: 0px;
+	border-radius: 4px;
+	background-color: rgb(255, 255, 255);
+}
+
+QWidget#NotifyWnd {
+	background-color: #1BA9BA;
+	border-radius: 4px;
+}
+
+QWidget#NotifyWnd_Name {
+	background-color: #00FFFFFF;
+	font: bold 12px;
+	color: #FFFFFF
+}
+
+QWidget#NotifyWnd_Display {
+	background-color: rgba(255, 255, 255, 0);
+	color: #FFFFFF;
+}
+
+QWidget#NotifyWnd_Close {
+	background-color: rgba(255, 255, 255, 0);
+}
+/****************通知窗口 end********************/
+
+/****************标题栏 start******************/
+
+QWidget#Title_bar {
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	background-color: #00000000;
+}
+
+/* 	background: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0,
+                                 stop: 0 #1BA9BA, stop: 0.7 #1BA9BA,
+                                 stop: 0.7 #1BA9BA, stop: 1.0 #5AC1CD); */
+                                 
+QToolButton#Titlebar_Max {
+	background-color: rgba(255, 255, 255, 0);
+}
+QToolButton#Titlebar_Min
+{
+	height:27px;
+	width:30px;
+	background:#00000000;
+	border-image: url(:/Images/min_normal.png);  
+}
+
+QToolButton#Titlebar_Min:hover
+{
+	background:#02BB00;
+	border-image: url(:/Images/min_hover.png);  
+}
+
+QToolButton#Titlebar_Min:pressed
+{
+	background:#03A601;
+	border-image: url(:/Images/min_hover.png);  
+}
+
+
+
+
+QToolButton#Titlebar_Close
+{
+	height:27px;
+	width:30px;
+	background:#00000000;
+	border-image: url(:/Images/close_normal.png);  
+}
+
+QToolButton#Titlebar_Close:hover
+{
+	background:#F25561;
+	border-image: url(:/Images/close_hover.png);  
+}
+
+QToolButton#Titlebar_Close:pressed
+{
+	background:#E74450;
+	border-image: url(:/Images/close_hover.png);  
+}
+
+
+
+
+
+
+/****************标题栏 end********************/
+
+
+/****************系统设置tab start******************/
+QWidget#SettingTab_View {
+	background-color: #F6F6F6;
+	border: 1px solid #CDCDCD;
+}
+
+#SettingTab_View QToolButton {
+	background-color: #F6F6F6;
+	border: 1px solid #C1C2C3;
+	border-top-width: 0;
+	height: 42px;
+	color: #000000;
+}
+
+#SettingTab_View QToolButton:hover{
+	background-color: #DFDFDF;
+}
+
+#SettingTab_View QToolButton:checked{
+	background-color: #DFDFDF;
+}
+
+/****************系统设置tab end******************/
+
+/****************messageBox start******************/
+
+#DealMessageBox QWidget#widgetBorder {
+	border-radius: 4px;
+	border: 1px solid #022d38;
+}
+
+#DealMessageBox QWidget#wid_mid {
+	background-color: #FFFFFF;
+}
+
+#DealMessageBox QWidget#wid_bottom {
+	background-color: #FFFFFF;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+#DealMessageBox QPushButton#confirm,#cancel {
+	border: 2px solid #1ba9ba;
+	background-color: rgb(27, 169, 186);
+	color: rgb(255, 255, 255);
+}
+/****************messageBox end******************/
+
+QMenu {
+	font-family:"微软雅黑";
+	font-size:16px;
+	color:#333333;
+	border:1px solid #333333;
+    background-color: white;
+}
+
+
+QMenu::item {
+	height:32px;
+    padding: 0px 28px;
+    border: none;
+}
+QMenu::item:disabled
+{
+	color:#999999;
+}
+
+QMenu::item:selected {
+    border-color: none;
+    background: #1ba9ba;
+}
+QMenu::icon {
+	margin-left:9px;
+}

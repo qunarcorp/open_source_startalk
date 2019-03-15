@@ -1,0 +1,197 @@
+Application_Name = "Qunar IM"
+
+LoginWidget_Remember = "记住密码"
+LoginWidget_AutoLogin = "自动登录"
+LoginWidget_Submit = "登 录"
+LoginWidget_Signin = "注册"
+LoginWidget_iForgot = "找回密码"
+LoginWidget_UserPropt = "去哪儿帐号"
+LoginWidget_PassPropt = "密码"
+
+Presence_online = "在线"
+Presence_away = "离开"
+Presence_busy = "忙碌"
+Presence_offline = "离线"
+
+
+Statebtn_Tip_convasation = "组织架构"
+Statebtn_Tip_group = "群组消息"
+Statebtn_Tip_recent = "会话列表"
+
+
+MainWidget_Tab1 = "组织架构"
+MainWidget_Tab2 = "群组,组织架构,好友，公众号，黑名单"
+MainWidget_Tab3 = "会话列表"
+MainWidget_Tab4 ="好友列表"
+
+MainWidget_Service = "当地人"
+MainWidget_Setting = "设置"
+
+GroupDlg_AutoJoin = "订阅群消息"
+
+Console_TextSend = "发送"
+Console_TextRecv = "接收"
+Console_Clear = "清空"
+Console_Hide = "隐藏"
+
+AddGroupDlg_groupName= "群名称"
+AddGroupDlg_memberlist= "群成员列表"
+AddGroupDlg_btnAdd= "添加"
+AddGroupDlg_btnDel= "删除"
+MessageBox_EmptyGroupName = "群名称不能为空"
+SelectContactDialog_Title="选择群成员"
+
+MessageBox_Error = "出错啦,请尝试重新登录"
+MessageBox_Confirm = "确定"
+
+MessageBox_Tip = "提示"
+MessageBox_Cancel = "取消"
+MessageBox_Quit = "您确认要退出？"
+
+Message_Error = "由于网络或其他原因链接断开\n请重新登录"
+NotAuthorized_Error = "用户名或者密码错误！"
+Conflict_Error = "您的帐号已经登录了！"
+Unknown_Error =" 未知错误，代码:"
+OutOfDate_Error = "验证码已过期,请尝试重新登录"
+
+RosterListView_Time_yesterday = "昨天"
+RosterListView_Time_minute = "分钟前"
+RosterListView_Time_second = "秒前"
+RosterListView_LastPhoto = "[图片]"
+RosterListView_LastVoice = "[声音]"
+
+ChatDialog_Send = "发 送"
+ChatDialog_Title = "—"
+ChatDialog_VoiceTitle = "正在录音...  "
+ChatDialog_VoiceLength = "0/60秒"
+ChatDialog_VoiceUnit = "秒"
+ChatDialog_Font_Me = "我的气泡:"
+ChatDialog_Font_Other = "对方气泡:"
+ChatDialog_Font_Title = "显示字体:"
+
+TrayMenu_Item1 = "显示联系人面板"
+TrayMenu_Item6 = "清理缓存"
+TrayMenu_Item2 = "退出"
+TrayMenu_Item3 = "注销"
+TrayMenu_Item4 = "显示聊天框"
+TrayMenu_Item5 = "打开日志压缩包文件"
+TrayMenu_Item7 = "邮件发送日志"
+
+MainMenu_AddGroup = "新建群组"
+MainMenu_Feedback = "意见反馈"
+MainMenu_About = "关于"
+MainMenu_GroupManager="加入群组"
+MainMenu_FindFriend="查找用户"
+
+Group_Name="组名称"
+GroupChatDialog_JoinGroup = "邀请"
+GroupChatDialog_LeaveGroup = "退出群"
+GroupChatDialog_InitGroupList = "正在加载群列表..."
+GroupChatDialog_GroupMemberCount = "群成员%1人"
+
+
+MinitoolBar_Ok = "确定"
+MinitoolBar_Cancel = "取消"
+ScreenShoter_SaveAS = "保存为"
+
+
+UpdateInfor_Title="版本升级提示"
+MessageBox_installNewVersion = "立即更新"
+MessageBox_installNewVersionLater = "以后再说"
+MessageBox_noNewVersion = "已经是最新版本"
+MessageBox_hasNewVersion = "发现新版，立即下载并安装更新。"
+MessageBox_InstallFail = "安装失败"
+MessageBox_IsInstall="是否关闭程序程序进行安装？"
+MessageBox_OkInstall="请点击【确定】按钮，进行安装！"
+
+
+
+
+AboutDlg_Client_Ver = "客户端版本:"
+AboutDlg_Server_Ver = "服务端版本:"
+AboutDlg_ServerHost = "服务器地址:"
+
+
+VisitorAddedGroupChat = "加入群"
+VisitorLeaveGroupChat = "已经离开群"
+
+recent_item_action1 = "查看详情"
+recent_item_action2 = "设置"
+recent_item_action3 = "退出群"
+recent_item_action4 = "关闭"
+
+MultiChatDialog_AtCount = "你被 @ %1 次"
+MultiChatDialog_AtAll="@全体成员 %1:@all"
+
+SubjectChange_Notify = "[%1]%2 修改群公告：%3"
+SubjectChange_GroupName="修改群公告：%1群组被改成%2"
+
+GroupChatDialog_item_action1="设置管理员"
+GroupChatDialog_item_action2="取消管理员"
+GroupChatDialog_item_action3="移出该群组"
+
+GroupChatDialog_item_action4="开始聊天"
+GroupChatDialog_item_action5="发送文件"
+GroupChatDialog_item_action6="发送邮件"
+GroupChatDialog_item_action7="查看资料"
+
+CharCreateGroup = "建群组"
+
+debug_string="我一直在左上角和右上角找"
+
+groupDestroyed = "群 %1 已经被销毁"
+DestroyGroupFail = "群 %1 销毁失败,%2"
+DestroyGroupFail_404 = "群不存在(404)"
+SysMessageDlg_Title = "系统消息"
+NoticeMessageDlg_Title = "公告消息"
+
+GroupTextEditMenu_item_undo="撤销  Ctrl+Z"
+GroupTextEditMenu_item_redo="恢复  Ctrl+Y"
+GroupTextEditMenu_item_cut="剪切  Ctrl+X"
+GroupTextEditMenu_item_copy="复制  Ctrl+C"
+GroupTextEditMenu_item_past="粘贴  Ctrl+V"
+GroupTextEditMenu_item_del= "删除         "
+GroupTextEditMenu_item_All= "全选   Ctrl+A"
+GroupTextEditMenu_item_Saveas="另存为"
+
+GroupManagerDialog_Title="选择所要进入的群"
+SettingHotKeyInfor="请直接在键盘上输入新的快捷键"
+CREATE_NEW_GROUP_TIP="已经筛选%1人,请勾选需要添加的联系人"
+
+EmotionTab_item0="E-One"
+EmotionTab_path0="EmoticonsOne"
+EmotionTab_item1="Yahoo"
+EmotionTab_path1="yahooEmotions"
+EmotionTab_item2="牛驼"
+EmotionTab_path2="niutuoEmotions"
+EmotionTab_item3="QQ"
+EmotionTab_path3="EmoticonsQQ"
+
+CreateGroup="创建群组"
+InviteInGroup="邀请群成员"
+
+Emotion_ExportMenu="导出表情"
+Emotion_ImportMenu="导入表情"
+Emotion_CustomMenu="自定义表情"
+ERROREXPLOR="账号异常，请联系qunar"
+
+CreateGroupMsg_Error="创建群组失败"
+
+RecentItemInfor="当前最近联系的群/个人共%1项,最多%2项"
+
+SubScriptionNum="订阅号"
+FRIENDSDlg_Title="好友信息"
+
+sendMessageFail="非常抱歉，消息发送失败，ctrl+up/down 找回输入内容，重新发送"
+sendMessageFailOnly="非常抱歉，消息发送失败，请重新发送"
+
+DebugTitleInfor="(%1人,%2组,共%3人)"
+
+MessageState_Sended="已发送"
+MessageState_Readed="已读"
+MessageState_UnReaded="未读"
+
+
+
+
+

@@ -1,0 +1,71 @@
+<html>
+<head>
+	
+    <title>Replace Textareas by Class Name — CKEditor Sample</title>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <script type="text/JavaScript" src="./ckeditor.js"></script>
+    <script type="text/javascript" src="./config.js"></script>
+	<script type="text/javascript" src="../js/qwebchannel.js"></script>
+    <script type="text/javascript">
+	var oCKeditor;
+	var client_api;
+        function getData()
+        {
+            var ret= CKEDITOR.instances.editor1.getData();
+			client_api.jsgetNoteEdit(ret);
+			
+        }
+        function getText()
+        {
+            var stemTxt=CKEDITOR.instances.editor1.document.getBody().getText();
+            //return stemTxt;
+			alert(stemTxt);
+        }
+		function appData(data)
+		{
+			CKEDITOR.instances.editor1.setData(data);
+		}
+        function selectImageCallBack(funcNum,imageUrl,errMsg){
+            CKEDITOR.tools.callFunction(funcNum,imageUrl,errMsg);
+        }
+    </script>
+</head>
+<body>
+    <textarea class="ckeditor" cols="80" id="editor1" name="editor1" rows="10" style="margin-top:199px;">[CONTENT]</textarea>
+    <script type="text/javascript">
+        //<![CDATA[
+        
+        (function(){
+         oCKeditor = CKEDITOR.replace('editor1');
+         oCKeditor.on('instanceReady', function (event) {
+                      var editor = event.editor;
+                      setTimeout(function () {
+                                 // Delay bit more if editor is still not ready.
+                                 if (!editor.element) {
+                                 setTimeout(arguments.callee, 100);
+                                 return;
+                                 }
+                                 event.removeListener('instanceReady', this.callee);
+                                 if (editor.name == 'editor1') {
+                                 var command = editor.getCommand('maximize');
+                                 command.exec();
+                                 }
+                                 }, 0);
+                      }, null, null, 9999);
+         })();
+         //]]>
+		 
+		  window.onload = function() {
+		 
+		  var clientapi = oCKeditor;
+            new QWebChannel(qt.webChannelTransport, function(channel) {
+				
+                var clientapi = channel.objects.client_api;
+				
+                client_api = clientapi;
+            });
+        }
+		 
+    </script>
+</body>
+</html>

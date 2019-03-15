@@ -1,0 +1,17 @@
+
+
+#FriendsSearcher QListView{ background:#00000000; border:none;}
+
+#FriendsSearcher QLabel{ color: #333333; font-size:14px;}
+
+#FriendsSearcher QPushButton{ border:none; background-color:#1ba9ba; color: #EFEFEF; font-size:14px;}
+
+#FriendsSearcher QPushButton:hover{ background-color:#147a84;}
+
+#FriendsSearcher QLineEdit#lineEdit{ font-size: 15px; font-family:'Î¢ÈíÑÅºÚ'; color:#A7A6AA; border-radius: 4px; background-color: #515151; border:none; padding-left:10px;}
+#FriendsSearcher QLineEdit#lineEdit:focus{ background-color: #464545; color:#FFFFFF; border:none;}
+
+#FriendsSearcher QLabel#staticheadertext{color:#515151;font-size:14px;}
+#FriendsSearcher QLabel#selectedheadertext{color:#1ba9ba;font-size:14px;}
+
+#FriendsSearcher QWidget#domainpanel{border:1px solid #D1D1D1; background:#ECECEC;}

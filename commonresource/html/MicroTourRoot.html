@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <link rel="apple-touch-icon-precomposed" href="//source.qunarzz.com/hotel/mobile/touch/qunar-touch.png"/>
+    <link rel="icon" href="//touch.qunar.com/favicon.ico" type="image/x-icon">
+    <title>微导游</title>
+    <style media="screen">
+    *,::before,::after{-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+    html{background-color:#f2f2f2;color:#212121;font-size:100px;-webkit-user-select:none;user-select:none}
+    @media(min--moz-device-pixel-ratio:1.5) and (max--moz-device-pixel-ratio:2.49),(-webkit-min-device-pixel-ratio:1.5) and (-webkit-max-device-pixel-ratio:2.49),(min-device-pixel-ratio:1.5) and (max-device-pixel-ratio:2.49),(min-resolution:144dpi) and (max-resolution:239dpi),(min-resolution:1.5dppx) and (max-resolution:2.49dppx){html[ios="true"]{font-size:200px}
+    }
+    @media(min--moz-device-pixel-ratio:2.5),(-webkit-min-device-pixel-ratio:2.5),(min-device-pixel-ratio:2.5),(min-resolution:240dpi),(min-resolution:2.5dppx){html[ios="true"]{font-size:300px}
+    }
+    body{margin:0;font-size:14px;line-height:1.5;font-family:PingFang SC,Helvetica Neue,Helvetica,STHeiTi,sans-serif}
+    @media(min--moz-device-pixel-ratio:1.5) and (max--moz-device-pixel-ratio:2.49),(-webkit-min-device-pixel-ratio:1.5) and (-webkit-max-device-pixel-ratio:2.49),(min-device-pixel-ratio:1.5) and (max-device-pixel-ratio:2.49),(min-resolution:144dpi) and (max-resolution:239dpi),(min-resolution:1.5dppx) and (max-resolution:2.49dppx){html[ios="true"] body{font-size:28px}
+    }
+    @media(min--moz-device-pixel-ratio:2.5),(-webkit-min-device-pixel-ratio:2.5),(min-device-pixel-ratio:2.5),(min-resolution:240dpi),(min-resolution:2.5dppx){html[ios="true"] body{font-size:42px}
+    }
+    ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,figure,form,fieldset,legend,input,textarea,button,p,blockquote,th,td,pre,xmp{margin:0;padding:0}
+    input,textarea,button,select,pre,xmp,tt,code,kbd,samp{line-height:inherit;font-family:inherit}
+    h1,h2,h3,h4,h5,h6,small,big,input,textarea,button,select{font-size:inherit}
+    address,cite,dfn,em,i,optgroup,var{font-style:normal}
+    table{border-collapse:collapse;border-spacing:0;table-layout:fixed;text-align:left}
+    ul,ol,menu{list-style:none}
+    fieldset,img{border:0;vertical-align:middle}
+    article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}
+    audio,canvas,video{display:inline-block}
+    blockquote:before,blockquote:after,q:before,q:after{content:"\0020"}
+    textarea,pre,xmp{overflow:auto;-webkit-overflow-scrolling:touch}
+    textarea{resize:vertical}
+    input,textarea,button,select a{outline:0 none}
+    input,textarea,button,select{color:inherit}
+    input:disabled,textarea:disabled,button:disabled,select:disabled{opacity:1}
+    button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}
+    input[type="button"],input[type="submit"],input[type="reset"],input[type="file"]::-webkit-file-upload-button,input[type="search"]::-webkit-search-cancel-button{-webkit-appearance:none;appearance:none}
+    mark{background-color:transparent}
+    a,ins,s,u,del{text-decoration:none}
+    a,img{-webkit-touch-callout:none}
+    a{color:#00afc7}
+    .g-clear::after,.g-mod::after{display:block;overflow:hidden;clear:both;height:0;content:"\0020"}
+    .yo-flex>.flex::-webkit-scrollbar,.yo-flex .flex-inherit>.flex::-webkit-scrollbar{display:none}
+    body{font-weight:300}
+    .g-wrap{background-color:#f2f2f2;font-size:.14rem;overflow:hidden}
+    .time {margin:0 -15px;padding:18px 0 9px;text-align:center;font-size:12px;color:#666;background-color:#f2f2f2}
+    .time .date {margin-right:10px}
+    .m-msg{margin:0 15px 15px;background-color:#fff;padding:0 15px 15px}
+    .time{margin:0 -15px;padding:18px 0 9px;text-align:center;font-size:12px;color:#666;background-color:#f2f2f2}
+    .m-msg .time .date{margin-right:10px}
+    .m-msg .title{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-align:center;-webkit-align-items:center;align-items:center;padding-top:12px;padding-bottom:8px;font-size:15px;color:#40b7c5}
+    .m-msg .flex{-webkit-box-flex:1;-webkit-flex:1;flex:1;display:block;width:100%;height:auto}
+    .m-msg .mark{font-size:12px;color:#999}
+    .m-msg .content{margin-bottom:15px;font-size:14px;color:#333}
+    .m-msg .content .pic-list{padding-top:7px;font-size:0}
+    .m-msg .content .item{display:inline-block;width:33.33%;padding:0 2px}
+    .m-msg .content .item:first-child{padding-left:0}
+    .m-msg .content .item:last-child{padding-right:0}
+    .m-msg .content.pdrsist{color:#999}
+    .m-msg .pdrsist .cont{padding-bottom:14px;margin-bottom:8px;border-bottom:1px solid rgba(230,230,230,0.3);color:#333}
+    .m-msg .pdrsist .tag{margin-right:4px;color:#fff;background-color:#f5a623;padding:0 6px;line-height:16px;font-size:11px}
+    .m-msg .pdrsist .tag,.m-msg .pdrsist .text{display:inline-block;vertical-align:middle}
+    .m-msg .btn{display:block;text-align:center;margin:0 -15px;height:35px;line-height:35px;background-color:#4cccdd;color:#fff;font-size:13px;border-top:1px solid #4cccdd}
+    .m-msg .btn.done{background-color:#fff;color:#666;border-top-color:rgba(230,230,230,0.5)}
+    </style>
+</head>
+<script>
+    window.Client = {};
+    ['openNewSession', 'updateCardState', 'closeBrowser','openNewLink'].map(function (method) {
+        window.Client[method] = function () {
+            if (typeof ClientApi !== 'undefined' && ClientApi.openNewSession) {
+                ClientApi[method].apply(null, arguments);
+            } else if (typeof window.Cocoa !== 'undefined' && window.Cocoa[method]) {
+                var argsArray = Array.prototype.slice.call(arguments);
+                if(argsArray.length > 0) {
+                     eval("window.Cocoa."+method+"('"+argsArray.join("','")+"');");
+                }else{
+                     eval("window.Cocoa."+method+"();");
+                }
+            } else if(window[method]){
+                window[method].apply(null, arguments);
+            }
+        }
+    });
+
+    Date.prototype.Format = function (fmt) {
+        var o = {
+            "M+": this.getMonth() + 1,
+            "d+": this.getDate(),
+            "h+": this.getHours(),
+            "m+": this.getMinutes(),
+            "s+": this.getSeconds(),
+            "q+": Math.floor((this.getMonth() + 3) / 3),
+            "S": this.getMilliseconds()
+        };
+        if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+        for (var k in o) {
+            if (new RegExp("(" + k + ")").test(fmt)) {
+                fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+            }
+        }
+        return fmt;
+    }
+
+    function pushMessage(data){
+        var $container = document.querySelector("#wrapper");
+        if (data.htmlcontent) {
+            var messageDate = new Date(data.time).Format("yyyy-MM-dd hh:mm");
+            var str = data.htmlcontent.replace('<div class="mark"></div>', '<div class="mark">' + messageDate + '</div>');
+            $container.innerHTML += str;
+        }
+    }
+
+    function updateMessage(msgId, status) {
+        if(!msgId) {return;}
+        var msg = document.querySelector('#' + msgId);
+        if(!msg) { return false; }
+        var btn = msg.querySelector('.btn');
+        if(!btn) {return false;}
+        btn.classList.add('done');
+        btn.innerText = status;
+        btn.setAttribute('href', 'javascript:0;');
+    }
+</script>
+<body>
+    <div class="g-wrap" id="wrapper">
+    </div>
+</body>
+<!--script>
+ var data={
+              "time": 1462943381886,
+              "from": {
+                "user":"guide",
+                "userImage":"http://img1.qunarzz.com/vc/1a/8e/20/4fb4e7e47eed9f6e3912de6df0.jpg_92.jpg"
+              },
+              "htmlcontent":"<div class=\"m-msg\"><div class=\"title\"><div class=\"flex\">#名古屋#问题</div><div class=\"mark\"></div></div><div class=\"content\">%s请问我要从名古屋往返东京，对于交通方式有什么好的建议？</div><a href=\"javascript:void(0);\" class=\"btn\">立即抢单</a></div>"
+            };
+ pushMessage(data)
+</script--!>
+</html>

@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PersonInfor_employDialog</class>
+ <widget class="QDialog" name="PersonInfor_employDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>498</width>
+    <height>532</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#widget_bkg{
+    background-color:#D3D3D3;
+    border-radius: 4px;
+	border:1px solid #000000;
+}
+QLabel{
+    font-size:12px;
+    color:#000000;
+}
+
+QWidget#widget
+{
+	background-color:#EAEAEA;
+}
+
+QLabel#title_label{
+    font: bold 14px;
+}
+
+QLabel#sp_1,#sp_2,#sp_3{
+    border:1px solid #D6D6D6;
+}
+
+
+QPushButton#ButtonOK
+{
+    border-radius: 2px;
+    border:1px solid #EBEBEB;
+    background-color:#FFFFFF;
+}
+
+QPushButton#ButtonOK:hover{
+    border-radius: 2px;
+    border:1px solid #EBEBEB;
+    background-color:#EBEBEB;
+}
+
+QPushButton#pbclose{
+	border-top-right-radius: 4px;
+    border:1px solid #00000000;
+    background-color:#FFFFFF;
+}
+
+QPushButton#pbclose:hover{
+    background-color:#FF0000;
+}
+QPushButton#pbclose:pressed{
+    background-color:#A30707;
+}
+QScrollArea#scrollArea{
+	border:none;
+}
+
+QWidget#scrollAreaWidgetContents{
+	background-color:#FFFFFFFF;
+}
+QWidget#vline{
+	background: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0,  
+                                 stop: 0 #00000000, stop: 0.1 #A3A6A9,  
+                                 stop: 0.9 #A3A6A9, stop: 1.0 #00000000); 
+}
+
+
+QLabel#label_SaveResult
+{
+	font-size:18px;
+}</string>
+  </property>
+  <widget class="QWidget" name="widget_bkg" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>498</width>
+     <height>532</height>
+    </rect>
+   </property>
+   <widget class="QWidget" name="TitleBar" native="true">
+    <property name="geometry">
+     <rect>
+      <x>1</x>
+      <y>1</y>
+      <width>498</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <widget class="QPushButton" name="pbclose">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>2</y>
+       <width>30</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>X</string>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="title_label">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>5</y>
+       <width>80</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>基本信息</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QScrollArea" name="scrollArea">
+    <property name="geometry">
+     <rect>
+      <x>1</x>
+      <y>41</y>
+      <width>496</width>
+      <height>490</height>
+     </rect>
+    </property>
+    <property name="widgetResizable">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>496</width>
+       <height>490</height>
+      </rect>
+     </property>
+     <widget class="QWidget" name="widget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>481</width>
+        <height>491</height>
+       </rect>
+      </property>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>40</y>
+         <width>54</width>
+         <height>12</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>登录名:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="loginName_label">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>40</y>
+         <width>141</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>TextLoginNameLabel</string>
+       </property>
+       <property name="textInteractionFlags">
+        <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="sp_1">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>90</y>
+         <width>500</width>
+         <height>1</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>130</y>
+         <width>54</width>
+         <height>12</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>电话:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="mobil_label">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>130</y>
+         <width>141</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>TextPhoneLabel</string>
+       </property>
+       <property name="textInteractionFlags">
+        <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="sp_2">
+       <property name="geometry">
+        <rect>
+         <x>-10</x>
+         <y>180</y>
+         <width>500</width>
+         <height>1</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Emaillabel">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>230</y>
+         <width>54</width>
+         <height>12</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>邮箱:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Email_label">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>230</y>
+         <width>141</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>TextPhoneLabel</string>
+       </property>
+       <property name="textInteractionFlags">
+        <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="sp_3">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>280</y>
+         <width>500</width>
+         <height>1</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Image_Label">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>320</y>
+         <width>141</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="ButtonOK">
+       <property name="geometry">
+        <rect>
+         <x>360</x>
+         <y>440</y>
+         <width>75</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>确定</string>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="vline" native="true">
+    <property name="geometry">
+     <rect>
+      <x>1</x>
+      <y>31</y>
+      <width>496</width>
+      <height>10</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,158 @@
+/* 工具栏 */
+QWidget{
+    font-family:微软雅黑;
+}
+
+
+/* 邀请按钮 */
+QPushButton#addGroupItem{  
+    border:1px solid #00000000;
+    image : url(:/Images/titlebar_function_addMember_normal.png);
+}
+
+QPushButton#addGroupItem:hover{
+    image : url(:/Images/titlebar_function_addMember_down.png);
+}
+
+QPushButton#addGroupItem:pressed{
+    image : url(:/Images/titlebar_function_addMember_down.png);
+}
+
+/* 退出按钮 */
+ QPushButton#leaveButton{
+    border:1px solid #00000000;
+    image : url(:/Images/titlebar_function_quit_normal.png);
+}
+
+QPushButton#leaveButton:hover{
+	image : url(:/Images/titlebar_function_quit_down.png);
+}
+
+QPushButton#leaveButton:pressed{
+	image : url(:/Images/titlebar_function_quit_down.png);
+}
+
+QPushButton#sendmail{  
+    border:1px solid #00000000;
+    margin-right:6px;
+    image : url(:/Images/mailnormal.png);
+}
+QPushButton#sendmail:pressed{
+    image : url(:/Images/mailpress.png);
+}
+
+
+
+
+
+QCheckBox#chkAutoJoin:indicator:unchecked {
+    image: url(:/Images/notice_close.png)
+}
+QCheckBox#chkAutoJoin:indicator:checked {
+    image: url(:/Images/notice_open.png)
+}
+
+QWidget#spider_0{
+    background-color: #00000000;
+}
+
+QWidget#widget_3{
+    background-color: #FFFFFF;
+}
+QWidget#fontpage{
+    background-color: #FFFFFF;
+}
+QWidget#widget_tool{
+	border:none;
+    background-color: #FFFFFF;
+}
+QWidget#borderinput{
+    background-color: #FFFFFF;
+}
+QWidget#border_3,#webviewPanel{
+    background-color: #FFFFFF;
+}
+
+QWebView#webView
+{
+    background:#00000000;
+}
+
+
+QTextEdit#textEdit{
+    border:none;
+	background-color: #00000000;
+}
+
+QTextEdit#frametextedit{
+    border:none;
+	background-color: #FFFFFF;
+}
+
+   
+
+QWidget#groupLstPanel{
+    background-color:#FFFFFF;   
+}
+QWidget#groupListTitle{
+    background-color:#D7D7D7;   
+}
+
+QPushButton#sendbtn{
+    border-radius: 0px;
+    color:#666666;
+    border:1px solid #E5E5E5;
+    background-color:#FFFFFF;
+}
+
+QPushButton#sendbtn:hover{
+    color:#FFFFFF;
+    background-color:#38C738;
+}
+QPushButton#sendbtn:pressed{
+    color:#FFFFFF;
+    background-color:#2FB82F;
+}
+QLineEdit#noticy,#name
+{
+	border:none;
+	background:#00000000;
+	readonly:true;
+}
+
+QPushButton#productbtn{
+    border-radius: 0px;
+    color:#666666;
+    border:1px solid #E5E5E5;
+    background-color:#FFFFFF;
+}
+
+QPushButton#productbtn:hover{
+    color:#FFFFFF;
+    background-color:#38C738;
+}
+QPushButton#productbtn:pressed{
+    color:#FFFFFF;
+    background-color:#2FB82F;
+}
+
+QPushButton#externBtn{ 
+    border:none;
+	border-top-left-radius: 10px;          
+	border-bottom-left-radius: 10px;       
+	image : url(:/Images/expend_tol_normal.png);
+} 
+QPushButton#externBtn:hover{ 
+    image : url(:/Images/expend_tol_hover.png);
+} 
+QPushButton#externBtn:pressed{ 
+   image : url(:/Images/expend_tol_press.png);
+} 
+QPushButton#unreadBtn
+{
+	background-color: rgba(0, 0, 0,200);
+	border: 0px;
+	text-align: left;
+	color: #FFFFFF;
+	padding-left: 5px;
+}

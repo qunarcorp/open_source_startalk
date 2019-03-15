@@ -1,0 +1,712 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="CHAT_D|Win32">
+      <Configuration>CHAT_D</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="CHAT_D|x64">
+      <Configuration>CHAT_D</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="QCHAT_R|Win32">
+      <Configuration>QCHAT_R</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="QCHAT_R|x64">
+      <Configuration>QCHAT_R</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="_R4TS|Win32">
+      <Configuration>_R4TS</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="_R4TS|x64">
+      <Configuration>_R4TS</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AsyncHandler.cpp" />
+    <ClCompile Include="breakpad\client_info.cc" />
+    <ClCompile Include="breakpad\exception_handler.cc" />
+    <ClCompile Include="breakpad\guid_string.cc" />
+    <ClCompile Include="breakpad\minidump_generator.cc" />
+    <ClCompile Include="breakpad\stdafx.cpp" />
+    <ClCompile Include="breakpad\string_utils.cc" />
+    <ClCompile Include="consoleoutput.cpp" />
+    <ClCompile Include="CrcHelper.cpp" />
+    <ClCompile Include="CryptoHelper.cpp" />
+    <ClCompile Include="DispathThread.cpp" />
+    <ClCompile Include="DumpHandle.cpp" />
+    <ClCompile Include="GeneratedFiles\moc\moc_AsyncHandler.cpp" />
+    <ClCompile Include="GeneratedFiles\moc\moc_IJsonSerializeable.cpp" />
+    <ClCompile Include="GeneratedFiles\moc\moc_ISerializeable.cpp" />
+    <ClCompile Include="GeneratedFiles\moc\moc_IXmlSerializeable.cpp" />
+    <ClCompile Include="GeneratedFiles\moc\moc_LambdaRunnnable.cpp" />
+    <ClCompile Include="GeneratedFiles\moc\moc_LogProcess.cpp" />
+    <ClCompile Include="GeneratedFiles\moc\moc_LogWriter.cpp" />
+    <ClCompile Include="GeneratedFiles\moc\moc_SerializeableHelper.cpp" />
+    <ClCompile Include="IJsonSerializeable.cpp" />
+    <ClCompile Include="imagehelper.cpp" />
+    <ClCompile Include="IXmlSerializeable.cpp" />
+    <ClCompile Include="Log.cpp" />
+    <ClCompile Include="LogProcess.cpp" />
+    <ClCompile Include="LogWriter.cpp" />
+    <ClCompile Include="Markdown.cpp" />
+    <ClCompile Include="mdump.cpp" />
+    <ClCompile Include="RunnableExecutor.cpp" />
+    <ClCompile Include="SerializeableHelper.cpp" />
+    <ClCompile Include="SystemDefine.cpp" />
+    <ClCompile Include="UtilHelper.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="breakpad\client_info.h" />
+    <ClInclude Include="breakpad\exception_handler.h" />
+    <ClInclude Include="breakpad\guid_string.h" />
+    <ClInclude Include="breakpad\inc\auto_critical_section.h" />
+    <ClInclude Include="breakpad\inc\breakpad_types.h" />
+    <ClInclude Include="breakpad\inc\minidump_cpu_amd64.h" />
+    <ClInclude Include="breakpad\inc\minidump_cpu_ppc.h" />
+    <ClInclude Include="breakpad\inc\minidump_cpu_ppc64.h" />
+    <ClInclude Include="breakpad\inc\minidump_cpu_sparc.h" />
+    <ClInclude Include="breakpad\inc\minidump_cpu_x86.h" />
+    <ClInclude Include="breakpad\inc\minidump_exception_linux.h" />
+    <ClInclude Include="breakpad\inc\minidump_exception_mac.h" />
+    <ClInclude Include="breakpad\inc\minidump_exception_solaris.h" />
+    <ClInclude Include="breakpad\inc\minidump_exception_win32.h" />
+    <ClInclude Include="breakpad\inc\minidump_format.h" />
+    <ClInclude Include="breakpad\inc\minidump_size.h" />
+    <ClInclude Include="breakpad\inc\scoped_ptr.h" />
+    <ClInclude Include="breakpad\minidump_generator.h" />
+    <ClInclude Include="breakpad\stdafx.h" />
+    <ClInclude Include="breakpad\string_utils-inl.h" />
+    <ClInclude Include="consoleoutput.h" />
+    <ClInclude Include="CoreObject.h" />
+    <ClInclude Include="CrcHelper.h" />
+    <ClInclude Include="CryptoHelper.h" />
+    <ClInclude Include="DispathThread.h" />
+    <ClInclude Include="DumpHandle.h" />
+    <ClInclude Include="Log.h" />
+    <ClInclude Include="Markdown.h" />
+    <ClInclude Include="mdump.h" />
+    <ClInclude Include="RunnableExecutor.h" />
+    <ClInclude Include="SystemDefine.h" />
+    <ClInclude Include="UtilHelper.h" />
+    <CustomBuild Include="SerializeableHelper.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'">Moc%27ing SerializeableHelper.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQIM32 -DQCHAT -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_UNICODE  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtXml" "-I.\..\3rd\OpenSSL\include" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='CHAT_D|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='CHAT_D|x64'">Moc%27ing SerializeableHelper.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='CHAT_D|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='CHAT_D|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing SerializeableHelper.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_CODE_RUN -D_UNICODE  "-I.\..\base_lib\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtXml" "-I.\..\3rd\OpenSSL\include" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'">Moc%27ing SerializeableHelper.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_UNICODE "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='_R4TS|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='_R4TS|x64'">Moc%27ing SerializeableHelper.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='_R4TS|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='_R4TS|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing SerializeableHelper.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing SerializeableHelper.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_CODE_RUN -DQT_GUI_LIB -D_UNICODE "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc" "-I$(QTDIR)\include\QtGui"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing SerializeableHelper.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|x64'">Moc%27ing SerializeableHelper.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'">Moc%27ing SerializeableHelper.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQIM32 -DQCHAT -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_UNICODE  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc" "-I$(QTDIR)\include\QtGui"</Command>
+    </CustomBuild>
+    <CustomBuild Include="LogWriter.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'">Moc%27ing LogWriter.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQIM32 -DQCHAT -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_UNICODE  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtXml" "-I.\..\3rd\OpenSSL\include" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='CHAT_D|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='CHAT_D|x64'">Moc%27ing LogWriter.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='CHAT_D|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='CHAT_D|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing LogWriter.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_CODE_RUN -D_UNICODE  "-I.\..\base_lib\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtXml" "-I.\..\3rd\OpenSSL\include" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'">Moc%27ing LogWriter.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_UNICODE "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='_R4TS|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='_R4TS|x64'">Moc%27ing LogWriter.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='_R4TS|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='_R4TS|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing LogWriter.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing LogWriter.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_CODE_RUN -DQT_GUI_LIB -D_UNICODE "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc" "-I$(QTDIR)\include\QtGui"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing LogWriter.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|x64'">Moc%27ing LogWriter.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'">Moc%27ing LogWriter.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQIM32 -DQCHAT -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_UNICODE  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc" "-I$(QTDIR)\include\QtGui"</Command>
+    </CustomBuild>
+    <CustomBuild Include="LogProcess.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'">Moc%27ing LogProcess.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQIM32 -DQCHAT -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_UNICODE  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtXml" "-I.\..\3rd\OpenSSL\include" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='CHAT_D|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='CHAT_D|x64'">Moc%27ing LogProcess.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='CHAT_D|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='CHAT_D|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing LogProcess.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_CODE_RUN -D_UNICODE  "-I.\..\base_lib\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtXml" "-I.\..\3rd\OpenSSL\include" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'">Moc%27ing LogProcess.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_UNICODE "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='_R4TS|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='_R4TS|x64'">Moc%27ing LogProcess.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='_R4TS|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='_R4TS|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing LogProcess.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing LogProcess.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_CODE_RUN -DQT_GUI_LIB -D_UNICODE "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc" "-I$(QTDIR)\include\QtGui"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing LogProcess.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|x64'">Moc%27ing LogProcess.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'">Moc%27ing LogProcess.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQIM32 -DQCHAT -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_UNICODE  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc" "-I$(QTDIR)\include\QtGui"</Command>
+    </CustomBuild>
+    <CustomBuild Include="LambdaRunnnable.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'">Moc%27ing LambdaRunnnable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQIM32 -DQCHAT -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_UNICODE "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtXml" "-I.\..\3rd\OpenSSL\include" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='CHAT_D|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='CHAT_D|x64'">Moc%27ing LambdaRunnnable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='CHAT_D|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='CHAT_D|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing LambdaRunnnable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_CODE_RUN -D_UNICODE "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtXml" "-I.\..\3rd\OpenSSL\include" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'">Moc%27ing LambdaRunnnable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_UNICODE "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='_R4TS|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='_R4TS|x64'">Moc%27ing LambdaRunnnable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='_R4TS|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='_R4TS|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing LambdaRunnnable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing LambdaRunnnable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_CODE_RUN -DQT_GUI_LIB -D_UNICODE "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc" "-I$(QTDIR)\include\QtGui"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing LambdaRunnnable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|x64'">Moc%27ing LambdaRunnnable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'">Moc%27ing LambdaRunnnable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQIM32 -DQCHAT -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_UNICODE  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc" "-I$(QTDIR)\include\QtGui"</Command>
+    </CustomBuild>
+    <CustomBuild Include="IXmlSerializeable.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'">Moc%27ing IXmlSerializeable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQIM32 -DQCHAT -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_UNICODE  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtXml" "-I.\..\3rd\OpenSSL\include" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='CHAT_D|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='CHAT_D|x64'">Moc%27ing IXmlSerializeable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='CHAT_D|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='CHAT_D|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing IXmlSerializeable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_CODE_RUN -D_UNICODE  "-I.\..\base_lib\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtXml" "-I.\..\3rd\OpenSSL\include" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'">Moc%27ing IXmlSerializeable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_UNICODE "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='_R4TS|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='_R4TS|x64'">Moc%27ing IXmlSerializeable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='_R4TS|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='_R4TS|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing IXmlSerializeable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing IXmlSerializeable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_CODE_RUN -DQT_GUI_LIB -D_UNICODE "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc" "-I$(QTDIR)\include\QtGui"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing IXmlSerializeable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|x64'">Moc%27ing IXmlSerializeable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'">Moc%27ing IXmlSerializeable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQIM32 -DQCHAT -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_UNICODE  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc" "-I$(QTDIR)\include\QtGui"</Command>
+    </CustomBuild>
+    <CustomBuild Include="ISerializeable.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'">Moc%27ing ISerializeable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQIM32 -DQCHAT -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_UNICODE "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtXml" "-I.\..\3rd\OpenSSL\include" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='CHAT_D|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='CHAT_D|x64'">Moc%27ing ISerializeable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='CHAT_D|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='CHAT_D|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing ISerializeable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_CODE_RUN -D_UNICODE "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtXml" "-I.\..\3rd\OpenSSL\include" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'">Moc%27ing ISerializeable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_UNICODE "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='_R4TS|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='_R4TS|x64'">Moc%27ing ISerializeable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='_R4TS|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='_R4TS|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing ISerializeable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing ISerializeable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_CODE_RUN -DQT_GUI_LIB -D_UNICODE "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc" "-I$(QTDIR)\include\QtGui"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing ISerializeable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|x64'">Moc%27ing ISerializeable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'">Moc%27ing ISerializeable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQIM32 -DQCHAT -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_UNICODE  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc" "-I$(QTDIR)\include\QtGui"</Command>
+    </CustomBuild>
+    <CustomBuild Include="IJsonSerializeable.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'">Moc%27ing IJsonSerializeable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQIM32 -DQCHAT -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_UNICODE  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtXml" "-I.\..\3rd\OpenSSL\include" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='CHAT_D|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='CHAT_D|x64'">Moc%27ing IJsonSerializeable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='CHAT_D|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='CHAT_D|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing IJsonSerializeable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_CODE_RUN -D_UNICODE  "-I.\..\base_lib\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtXml" "-I.\..\3rd\OpenSSL\include" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'">Moc%27ing IJsonSerializeable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_UNICODE "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='_R4TS|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='_R4TS|x64'">Moc%27ing IJsonSerializeable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='_R4TS|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='_R4TS|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing IJsonSerializeable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing IJsonSerializeable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_CODE_RUN -DQT_GUI_LIB -D_UNICODE "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc" "-I$(QTDIR)\include\QtGui"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing IJsonSerializeable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|x64'">Moc%27ing IJsonSerializeable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'">Moc%27ing IJsonSerializeable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQIM32 -DQCHAT -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_UNICODE  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc" "-I$(QTDIR)\include\QtGui"</Command>
+    </CustomBuild>
+    <CustomBuild Include="AsyncHandler.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'">Moc%27ing AsyncHandler.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQIM32 -DQCHAT -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_UNICODE  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtXml" "-I.\..\3rd\OpenSSL\include" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='CHAT_D|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='CHAT_D|x64'">Moc%27ing AsyncHandler.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='CHAT_D|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='CHAT_D|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing AsyncHandler.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_CODE_RUN -D_UNICODE  "-I.\..\base_lib\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtXml" "-I.\..\3rd\OpenSSL\include" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'">Moc%27ing AsyncHandler.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_UNICODE "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='_R4TS|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='_R4TS|x64'">Moc%27ing AsyncHandler.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='_R4TS|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='_R4TS|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing AsyncHandler.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing AsyncHandler.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_CODE_RUN -DQT_GUI_LIB -D_UNICODE "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc" "-I$(QTDIR)\include\QtGui"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing AsyncHandler.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|x64'">Moc%27ing AsyncHandler.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'">Moc%27ing AsyncHandler.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQIM32 -DQCHAT -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_UNICODE  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc" "-I$(QTDIR)\include\QtGui"</Command>
+    </CustomBuild>
+    <CustomBuild Include="imagehelper.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'">Moc%27ing imagehelper.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQIM32 -DQCHAT -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_UNICODE  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtXml" "-I.\..\3rd\OpenSSL\include" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='CHAT_D|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='CHAT_D|x64'">Moc%27ing imagehelper.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='CHAT_D|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='CHAT_D|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing imagehelper.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_CODE_RUN -D_UNICODE  "-I.\..\base_lib\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtXml" "-I.\..\3rd\OpenSSL\include" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'">Moc%27ing imagehelper.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_UNICODE "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='_R4TS|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='_R4TS|x64'">Moc%27ing imagehelper.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='_R4TS|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='_R4TS|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing imagehelper.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing imagehelper.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_CODE_RUN -DQT_GUI_LIB -D_UNICODE "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc" "-I$(QTDIR)\include\QtGui"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing imagehelper.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|x64'">Moc%27ing imagehelper.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|x64'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQT_DLL</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'">Moc%27ing imagehelper.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'">.\GeneratedFiles\moc\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc\moc_%(Filename).cpp"  -DQIM32 -DQCHAT -D_WINDOWS -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DLOCALMANUTILS_LIB -DQT_XML_LIB -DQT_NETWORK_LIB -D_UNICODE  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtNetwork" "-I.\GeneratedFiles\moc" "-I$(QTDIR)\include\QtGui"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7A6DCB88-17CC-4CB5-8189-CC0C8A667CE7}</ProjectGuid>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110_xp</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110_xp</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110_xp</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110_xp</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110_xp</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='CHAT_D|x64'" Label="Configuration">
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='_R4TS|x64'" Label="Configuration">
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|x64'" Label="Configuration">
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.60610.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <TargetName>$(ProjectName)D</TargetName>
+    <IncludePath>$(QtDir);../LocalManUtils;../LocalManBiz;../QXmpp/base;../3rd/OpenSSL/include;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)bin32\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'">
+    <TargetName>$(ProjectName)D</TargetName>
+    <IncludePath>$(QtDir);../LocalManUtils;../LocalManBiz;../QXmpp/base;../3rd/OpenSSL/include;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)bin32_chat\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <TargetName>$(ProjectName)</TargetName>
+    <IncludePath>$(QtDir);../LocalManUtils;../LocalManBiz;../QXmpp/base;../3rd/OpenSSL/include;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)bin32\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'">
+    <TargetName>$(ProjectName)</TargetName>
+    <IncludePath>$(QtDir);../LocalManUtils;../LocalManBiz;../QXmpp/base;../3rd/OpenSSL/include;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)bin32\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'">
+    <TargetName>$(ProjectName)</TargetName>
+    <IncludePath>$(QtDir);../LocalManUtils;../LocalManBiz;../QXmpp/base;../3rd/OpenSSL/include;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)bin32_chat\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;LOCALMANUTILS_LIB;QT_XML_LIB;QT_NETWORK_LIB;_CODE_RUN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\..\base_lib\include;.\GeneratedFiles;.;$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtXml;.\..\3rd\OpenSSL\include;$(QTDIR)\include\QtNetwork;.\GeneratedFiles\moc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <BrowseInformation>true</BrowseInformation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).lib</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>qtmaind.lib;Qt5Cored.lib;Qt5Xmld.lib;Qt5Networkd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='CHAT_D|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>QIM32;QCHAT;_WINDOWS;UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;LOCALMANUTILS_LIB;QT_XML_LIB;QT_NETWORK_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtXml;.\..\3rd\OpenSSL\include;$(QTDIR)\include\QtNetwork;.\GeneratedFiles\moc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <BrowseInformation>true</BrowseInformation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).lib</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>qtmaind.lib;Qt5Cored.lib;Qt5Xmld.lib;Qt5Networkd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;LOCALMANUTILS_LIB;QT_XML_LIB;QT_NETWORK_LIB;_CODE_RUN;QT_GUI_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtNetwork;.\GeneratedFiles\moc;$(QTDIR)\include\QtGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).lib</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>qtmain.lib;Qt5Core.lib;Qt5Xml.lib;Qt5Network.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='_R4TS|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;LOCALMANUTILS_LIB;QT_XML_LIB;QT_NETWORK_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtNetwork;.\GeneratedFiles\moc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).lib</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>qtmain.lib;Qt5Core.lib;Qt5Xml.lib;Qt5Network.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>QIM32;QCHAT;_WINDOWS;UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;LOCALMANUTILS_LIB;QT_XML_LIB;QT_NETWORK_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtNetwork;.\GeneratedFiles\moc;$(QTDIR)\include\QtGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <Optimization>Disabled</Optimization>
+      <MinimalRebuild>true</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).lib</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>qtmain.lib;Qt5Core.lib;Qt5Xml.lib;Qt5Network.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='CHAT_D|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>QT_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='_R4TS|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>QT_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>QT_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>QT_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='QCHAT_R|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>QT_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties UicDir=".\GeneratedFiles" MocDir=".\GeneratedFiles\moc" MocOptions="" RccDir=".\GeneratedFiles" lupdateOnBuild="0" lupdateOptions="" lreleaseOptions="" Qt5Version_x0020_Win32="msvc2012" Qt5Version_x0020_x64="55.2013.64" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

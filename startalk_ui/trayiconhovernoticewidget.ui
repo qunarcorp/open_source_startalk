@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TrayIconHoverNoticeWidget</class>
+ <widget class="QWidget" name="TrayIconHoverNoticeWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>285</width>
+    <height>523</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>TrayIconHoverNoticeWidget</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+	font-family:&quot;微软雅黑&quot;;
+}
+
+QWidget#TrayIconHoverNoticeWidget
+{
+	width:200px;
+	min-width:200px;
+	background:#EEF0F0F0;
+	border:1px solid #3A3A3A;
+}
+
+QListWidget
+{
+	border:none;
+	background:#00000000;
+}
+QListWidget:item
+{
+	border:none;
+	background:#00000000;
+}
+
+QListView {
+    show-decoration-selected: 1; 
+    outline:0px;
+}
+QListView::item:selected {
+    border: none;
+    background: #FFE090;
+}
+
+QListView::item:hover {
+    background: #FFE090;
+}
+
+QLabel#title
+{
+	min-height:34px;
+	height:34px;
+	font-size:12px;
+	font:bold;
+	padding-left:10px;
+}
+
+QPushButton
+{
+	min-height:34px;
+	height:34px;
+	font-size:12px;
+	border:none;
+	background:#00000000;
+	padding:0px 3px;
+	color:#3DCE3D;
+	font:bold;
+}
+
+QPushButton:hover
+{
+	color:#38C738;
+}
+
+QPushButton:pressed
+{
+	color:#2FB82F;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QLabel" name="title">
+     <property name="text">
+      <string>新消息（1）</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QListWidget" name="listWidget">
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>false</bool>
+     </property>
+     <property name="verticalScrollMode">
+      <enum>QAbstractItemView::ScrollPerPixel</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="widget" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>10</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>10</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>125</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="ignore">
+        <property name="text">
+         <string>忽略全部</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

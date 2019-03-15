@@ -1,0 +1,50 @@
+﻿#MultiDialogContainer QWidget#spitter_right,#MultiDialogContainer QWidget#custemwidgets,#MultiDialogContainer QWidget#webwidgets{background-color:#F5F5F5;}
+
+/*右侧背景*/
+#MultiDialogContainer QWidget#rightpanel{background-color:#EAEAEA;}
+#MultiDialogContainer QListWidget {border:none;background-color:#00000000;}
+
+/*搜索框*/
+#MultiDialogContainer QLineEdit#lineEdit{font-size: 15px;color:#000000;background-color: #EFEFEF;border-left:1px solid #E1DFDF;border-top:1px solid #E1DFDF;border-bottom:1px solid #E1DFDF;padding-left:3px;}
+#MultiDialogContainer QWidget#lineEditPanel{border:none;border-bottom:1px solid #E1DFDF;}
+
+
+#MultiDialogContainer QSlider#loadmsgprogress::groove:horizontal {border: none;height: 2px;background:#E1DFDF;}
+#MultiDialogContainer QSlider#loadmsgprogress::handle:horizontal {background: #1bA9BA;border: none;width: 40px;}
+
+/*创建群按钮*/
+#MultiDialogContainer QPushButton#createnewgroup {border: none;image: url(:/Images/addButton.png);background:#DCDCDC;}
+#MultiDialogContainer QPushButton#createnewgroup:hover {background:#D1D1D1;}
+#MultiDialogContainer QPushButton#createnewgroup:pressed {background:#DCDCDC;}
+
+
+/*下浮动栏的设置图标*/
+#MultiDialogContainer QLabel#label_4 { border:none; color:#CFCFCF; font-size:14px;}
+
+
+/*下浮动栏的面板整个*/
+#MultiDialogContainer QWidget#menupanel { background:#DDFFFFFF;}
+
+/*下浮动栏的加载全部和加载未读按钮*/
+#MultiDialogContainer QPushButton#loadAll,#MultiDialogContainer QPushButton#loadUnread{background:#00000000;border:none;font-size:18px;padding-left:20px;padding: 0px 10px 0px 20px;text-align:left;color:#818181;}
+#MultiDialogContainer QPushButton#loadAll:hover,#MultiDialogContainer QPushButton#loadUnread:hover{background: #99FFFFFF;}
+#MultiDialogContainer QLabel#couversationCount{padding: 0px 10px 0px 20px;text-align:right;color:#818181;background:#00000000;border:none;font-size:10px;} 
+
+
+/* 空页 */
+#MultiDialogContainer QWidget#emptysessionpage{border:none;image:url(:/Images/no_session_selected_background.png);}
+
+/* 发起会话按钮*/
+#MultiDialogContainer QPushButton#openchat_simple,#MultiDialogContainer QPushButton#openchat{font-size:16px;border-radius: 0px;color:#FFFFFF;background-color:#3DCE3D;}
+#MultiDialogContainer QPushButton#openchat_simple:disabled,#MultiDialogContainer QPushButton#openchat:disabled{background-color:#9DE69D;}
+#MultiDialogContainer QPushButton#openchat_simple:hover,#MultiDialogContainer QPushButton#openchat:hover{background-color:#38C738;}
+#MultiDialogContainer QPushButton#openchat_simple:pressed,#MultiDialogContainer QPushButton#openchat:pressed{background-color:#2FB82F;}
+
+
+/*单人的*/
+
+#MultiDialogContainer QLabel#label_email,#MultiDialogContainer QLabel#label_2,#MultiDialogContainer QLabel#label_3,#MultiDialogContainer QLabel#label_5,#MultiDialogContainer QLabel#label_9{color:#A6A6A6;font-size:16px;}
+
+#MultiDialogContainer QLineEdit#user_email,#MultiDialogContainer QLineEdit#user_name,#MultiDialogContainer QLineEdit#staffusersgroup,#MultiDialogContainer QLineEdit#user_id,#MultiDialogContainer QLineEdit#groupdata,#MultiDialogContainer QLineEdit#grouppath{color:#444444;font-size:16px;border:none;background:#00000000;}
+
+
